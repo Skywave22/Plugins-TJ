@@ -21,6 +21,7 @@ They are the TJ-Plugins (SkyStream) plugins, converted to run as Nuvio providers
 | **Cinezo** | Hindi dubs, multi-audio, English up to 4K, with subtitles (VidNest + ScreenScape servers) | ✅ | ✅ | ✅ | ✅ |
 | **ScreenScape** | 30+ "Scape" servers per title: Hindi dubs (MhPly, AwsPly, Citadel), Nitro multi-audio, 4K-Hub | ✅ | ✅ | ✅ | ✅ |
 | **CineHD** | TMDB catalog with many servers: MhPly/AwsPly Hindi, Nitro multi-audio, HDHub, Rock HLS, VidAPI | ✅ | ✅ | ✅ | ✅ |
+| **CineJoy** | TMDB catalog with Nitro multi-audio, MhPly/AwsPly/Citadel Hindi, StremFx, HDHub, VidAPI, MovieBox | ✅ | ✅ | ✅ | ✅ |
 
 More providers are being added one at a time.
 

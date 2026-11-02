@@ -1,0 +1,17 @@
+{
+  "name": "CineJoy",
+  "description": "CineJoy (cinejoy.pk) — movies & series from a TMDB catalog (Netflix/Prime rows) with many servers per title: Nitro multi-audio, MhPly/AwsPly Hindi, HDHub, VidAPI, MovieBox, Rock HLS. Links are checked before they are shown.",
+  "version": "1.0.0",
+  "supportedTypes": [
+    "movie",
+    "tv"
+  ],
+  "formats": [
+    "m3u8",
+    "mp4"
+  ],
+  "logo": "https://www.google.com/s2/favicons?domain=cinejoy.pk&sz=128",
+  "contentLanguage": [
+    "en"
+  ]
+}

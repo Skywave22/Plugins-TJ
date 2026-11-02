@@ -209,7 +209,7 @@ async function probe(s) {
   const get = async (u, range) => {
     const ac = new AbortController(); const tm = setTimeout(() => ac.abort(), 20000);
     const r = await fetch(u, { headers: range ? { ...h, Range: "bytes=0-65535" } : h, signal: ac.signal });
-    const chunks = []; let n = 0; const cap = range ? 65536 : 4 * 1024 * 1024;   // never download a whole video
+    const chunks = []; let n = 0; const cap = range ? 65536 : (/\.m3u8|mpegurl/i.test(u) ? 4 * 1024 * 1024 : 262144);   // never download a whole video
     try { for await (const c of r.body) { chunks.push(Buffer.from(c)); n += c.length; if (n >= cap) break; } } catch {}
     ac.abort(); clearTimeout(tm);
     const b = Buffer.concat(chunks);
@@ -231,7 +231,8 @@ async function probe(s) {
       const seg = txt.split(/\r?\n/).find((l) => l && !l.startsWith("#"));
       if (!seg) return "playlist without segments";
       const d = txt.split(/\r?\n/).filter((l) => l.startsWith("#EXTINF")).reduce((a, l) => a + parseFloat(l.slice(8)), 0);
-      const sg = await get(new URL(seg, mediaUrl).href, true);
+      let sg = await get(new URL(seg, mediaUrl).href, true);
+      if (sg.status >= 400) sg = await get(new URL(seg, mediaUrl).href, false);   // players fetch segments without Range
       if (sg.status >= 400) return `segment HTTP ${sg.status}`;
       const b0 = sg.body[0];
       return `OK hls ${(d / 60).toFixed(0)} min, segment ${sg.status} ${b0 === 0x47 ? "ts" : sg.type || "bytes"}`;

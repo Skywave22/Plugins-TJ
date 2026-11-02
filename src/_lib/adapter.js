@@ -112,6 +112,8 @@ function toNuvio(s, cfg, info) {
     url = "data:application/vnd.apple.mpegurl;base64," + url.slice(11);
   } else if (!/^https?:\/\//i.test(url)) return null;
   var label = String(s.source || s.name || "Server").replace(/\s+/g, " ").trim();
+  var low = label.toLowerCase(), pre = String(cfg.name).toLowerCase();
+  if (low.indexOf(pre) === 0 && label.length > pre.length + 1) label = label.slice(pre.length).replace(/^[\s·:|-]+/, "") || label;   // "CineJoy Nitro" → "Nitro"
   var text = label + " " + (s.quality || "") + " " + (s.name || "");
   var headers = {};
   if (s.headers && typeof s.headers === "object") Object.keys(s.headers).forEach(function (k) {
@@ -135,6 +137,7 @@ function toNuvio(s, cfg, info) {
   var size = sizeOf(text); if (size) o.size = size;
   if (Object.keys(headers).length) o.headers = headers;
   if (subs.length) o.subtitles = subs;
+  if (cfg.hooks && typeof cfg.hooks.stream === "function") { try { o = cfg.hooks.stream(o) || o; } catch (e) {} }
   return o;
 }
 

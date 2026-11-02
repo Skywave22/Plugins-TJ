@@ -22,4 +22,15 @@ export function nxTvServers(plain) {
   return JSON.stringify(o);
 }
 
-export var nxHooks = { afterDecrypt: nxTvServers };
+// VidPi (nxsha "vidapi") links: the playlists work with nxsha's Referer, but their segment host rejects it
+// (Cloudflare 403) and serves them fine without it. Nuvio sends the same headers for playlist and segments.
+export function nxStream(o) {
+  if (o && o.headers && /\/pl\/H4sI/.test(o.url)) {
+    Object.keys(o.headers).forEach(function (k) {
+      if (/^(referer|origin)$/i.test(k) && /nxsha/i.test(o.headers[k])) delete o.headers[k];
+    });
+  }
+  return o;
+}
+
+export var nxHooks = { afterDecrypt: nxTvServers, stream: nxStream };
