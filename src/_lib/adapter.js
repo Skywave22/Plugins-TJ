@@ -142,7 +142,8 @@ function toNuvio(s, cfg, info) {
 }
 
 // ───── provider ─────
-// cfg: { id, name, make, manifest, mode: "tmdb" | "search", inlineHls?, maxQueries?, hooks? }
+// cfg: { id, name, make, manifest, mode: "tmdb" | "search", inlineHls?, maxQueries?, hooks?,
+//        itemUrl?(tm, info), episodeUrl?(tm, info) }   (tmdb mode: the plugin's own URL format; default is its JSON form)
 export function makeProvider(cfg) {
   return async function getStreams(tmdbId, mediaType, season, episode) {
     var t0 = now();
@@ -156,10 +157,11 @@ export function makeProvider(cfg) {
       var epUrl = null;
 
       if (cfg.mode === "tmdb") {
-        var itemUrl = JSON.stringify({ type: tm.type, id: tm.id, title: tm.title });
+        var itemUrl = cfg.itemUrl ? cfg.itemUrl(tm, info) : JSON.stringify({ type: tm.type, id: tm.id, title: tm.title });
         var r = await call(api, "load", [itemUrl], Math.min(20000, left() - 20000));
         if (r && r.success !== false && r.data) epUrl = episodeFrom(r.data, info.k === "s" ? info.S : 0, info);
-        if (!epUrl) epUrl = info.k === "s"
+        if (!epUrl && cfg.episodeUrl) epUrl = cfg.episodeUrl(tm, info);
+        else if (!epUrl) epUrl = info.k === "s"
           ? JSON.stringify({ type: "tv", id: tm.id, s: info.S, e: info.E, title: tm.title, rt: tm.runtime || null })
           : JSON.stringify({ type: "movie", id: tm.id, title: tm.title, rt: tm.runtime || null });
       } else {
