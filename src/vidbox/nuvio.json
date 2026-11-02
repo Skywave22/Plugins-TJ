@@ -1,0 +1,23 @@
+{
+  "name": "Vidbox",
+  "description": "Vidbox (vidbox.vc) - TMDB catalog of movies and TV shows with Nxsha multi-language servers. Hindi audio first, then English, Tamil, Telugu, Urdu, Malayalam and Bengali. Every link is checked before it is shown.",
+  "version": "1.0.0",
+  "supportedTypes": [
+    "movie",
+    "tv"
+  ],
+  "formats": [
+    "m3u8",
+    "mp4"
+  ],
+  "logo": "https://www.google.com/s2/favicons?domain=vidbox.vc&sz=128",
+  "contentLanguage": [
+    "hi",
+    "en",
+    "ta",
+    "te",
+    "ur",
+    "mal",
+    "bn"
+  ]
+}

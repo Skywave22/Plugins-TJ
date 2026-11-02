@@ -24,6 +24,7 @@ They are the TJ-Plugins (SkyStream) plugins, converted to run as Nuvio providers
 | **CineJoy** | TMDB catalog with Nitro multi-audio, MhPly/AwsPly/Citadel Hindi, StremFx, HDHub, VidAPI, MovieBox | ✅ | ✅ | ✅ | ✅ |
 | **FMovies** | MoviesAPI multi-quality HLS with subtitles (limited catalog: its VidLove backup is offline) | ✅ | ✅ | ✅ | ✅ |
 | **RiveStream** | Citadel, Prvibd, River, Kutti, HindiSk servers plus MhPly/AwsPly/VidPi/HDHub: Hindi, English, Tamil, Telugu, Urdu | ✅ | ✅ | ✅ | ✅ |
+| **Vidbox** | Nxsha multi-language servers (TMDB ids, 1:1 matching): Hindi first, then English, Tamil, Telugu, Urdu | ✅ | ✅ | ✅ | ✅ |
 
 More providers are being added one at a time.
 

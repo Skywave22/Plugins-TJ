@@ -17,9 +17,15 @@ const cats = (sk.categories || []).join(" ");
 const types = [];
 if (/Movie|Anime/i.test(cats) || !cats) types.push("movie");
 if (/Tv|Series|Anime|Drama/i.test(cats) || !cats) types.push("tv");
+function shortDesc(d) {
+  d = d.replace(/\s+/g, " ").trim();
+  if (d.length <= 300) return d;
+  const cut = d.slice(0, 300), end = Math.max(cut.lastIndexOf(". "), cut.lastIndexOf("; "));
+  return end > 80 ? cut.slice(0, end + 1) : cut.replace(/[\s,;:-]+\S*$/, "") + "…";
+}
 const nuvio = {
   name,
-  description: desc.length ? desc.join(" ") : String(sk.description || name).replace(/\s+/g, " ").slice(0, 300),
+  description: desc.length ? desc.join(" ") : shortDesc(String(sk.description || name)),
   version: "1.0.0",
   supportedTypes: types,
   formats: formats.split(","),
