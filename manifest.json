@@ -1,6 +1,6 @@
 {
   "name": "TJ-Plugins",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "TJ-Plugins providers for Nuvio — Hindi, dubbed, Bollywood and world movies & series.",
   "author": "TJ-Plugins",
   "scrapers": [
@@ -89,6 +89,33 @@
       "logo": "https://www.google.com/s2/favicons?domain=fmoviess.tv&sz=128",
       "contentLanguage": [
         "en"
+      ]
+    },
+    {
+      "id": "rivestream",
+      "name": "RiveStream",
+      "description": "RiveStream (rivestream.ru) - TMDB-powered catalog of movies and TV shows, streamed from rivestream's server backends (Citadel, Prvibd, River, Kutti, Gbru, HindiSk) plus MhPly, AwsPly, VidPi and HDHub as fallbacks. Hindi audio is listed first, then English, Tamil, Telugu, Urdu, Malayalam and Bengali.",
+      "version": "1.0.0",
+      "author": "TJ-Plugins",
+      "supportedTypes": [
+        "movie",
+        "tv"
+      ],
+      "filename": "providers/rivestream.js",
+      "enabled": true,
+      "formats": [
+        "m3u8",
+        "mp4"
+      ],
+      "logo": "https://www.google.com/s2/favicons?domain=rivestream.ru&sz=128",
+      "contentLanguage": [
+        "hi",
+        "en",
+        "ta",
+        "te",
+        "ur",
+        "mal",
+        "bn"
       ]
     },
     {
