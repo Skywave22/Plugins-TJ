@@ -27,6 +27,7 @@ They are the TJ-Plugins (SkyStream) plugins, converted to run as Nuvio providers
 | **Vidbox** | Nxsha multi-language servers (TMDB ids, 1:1 matching): Hindi first, then English, Tamil, Telugu, Urdu | ✅ | ✅ | ✅ | ✅ |
 | **HiStream** | HiStream player servers: Hindi first, Bollywood, Hindi series and platform originals | ✅ | ✅ | ✅ | ✅ |
 | **ZXCStream** | Ad-free Main Server (vidstuck): Orion original audio + Hindi dub up to 1080p, Atlas, Daedalus, with subtitles | ✅ | ✅ | ✅ | ✅ |
+| **MoviesHubHD** | VidNest player network (Delta, Zeta, Alfa, Beta, Catflix…): Hindi + English, multi-audio, up to 4K, subtitles | ✅ | ✅ | ✅ | ✅ |
 
 More providers are being added one at a time.
 
