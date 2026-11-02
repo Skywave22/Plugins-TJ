@@ -7,7 +7,7 @@ import { parseTitle, loose, isSeries } from "./titles.js";
 import { tmdbInfo } from "./tmdb.js";
 
 var BUDGET_MS = 52000;   // Nuvio stops a provider after 60 s and then shows nothing from it
-var TV_NET_MS = 40000;   // NuvioTV: no new requests after this (each one blocks; see host.js)
+var TV_NET_MS = 32000;   // NuvioTV: no new requests after this (each one blocks; see host.js)
 
 function now() { return Date.now(); }
 
@@ -139,7 +139,7 @@ function toNuvio(s, cfg, info) {
 }
 
 // ───── provider ─────
-// cfg: { id, name, make, manifest, mode: "tmdb" | "search", inlineHls?, maxQueries? }
+// cfg: { id, name, make, manifest, mode: "tmdb" | "search", inlineHls?, maxQueries?, hooks? }
 export function makeProvider(cfg) {
   return async function getStreams(tmdbId, mediaType, season, episode) {
     var t0 = now();
@@ -149,7 +149,7 @@ export function makeProvider(cfg) {
       var tm = await tmdbInfo(tmdbId, mediaType);
       if (!tm) return [];
       var info = { id: tm.id, t: tm.title, title: tm.title, y: tm.year, k: tm.type === "tv" ? "s" : "m", S: +season || (tm.type === "tv" ? 1 : 0), E: +episode || (tm.type === "tv" ? 1 : 0), alts: tm.alts, tm: tm };
-      var api = instantiate(cfg.make, cfg.manifest);
+      var api = instantiate(cfg.make, cfg.manifest, cfg.hooks);
       var epUrl = null;
 
       if (cfg.mode === "tmdb") {

@@ -2,5 +2,6 @@
 import make from "./plugin.skystream.js";
 import manifest from "./skystream.json";
 import { makeProvider } from "../_lib/adapter.js";
+import { nxHooks } from "../_lib/nxsha.js";
 
-export const getStreams = makeProvider({ id: "cinezo", name: "Cinezo", make, manifest, mode: "tmdb" });
+export const getStreams = makeProvider({ id: "cinezo", name: "Cinezo", make, manifest, mode: "tmdb", hooks: nxHooks });

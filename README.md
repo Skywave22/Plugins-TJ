@@ -19,14 +19,16 @@ They are the TJ-Plugins (SkyStream) plugins, converted to run as Nuvio providers
 | Provider | Content | Movies | Series | Nuvio (phone) | NuvioTV |
 |---|---|:-:|:-:|:-:|:-:|
 | **Cinezo** | Hindi dubs, multi-audio, English up to 4K, with subtitles (VidNest + ScreenScape servers) | ✅ | ✅ | ✅ | ✅ |
+| **ScreenScape** | 30+ "Scape" servers per title: Hindi dubs (MhPly, AwsPly, Citadel), Nitro multi-audio, 4K-Hub | ✅ | ✅ | ✅ | ✅ |
 
 More providers are being added one at a time.
 
 ### Notes
 - Links are checked before they are shown. Links that could not be checked are marked *(may not play)*.
 - **NuvioTV** runs a provider's requests one at a time, so providers are slower there than on a phone
-  (Cinezo: about 5–15 s on a phone, about 35–40 s on TV). On TV, a provider stops making new requests
-  after 40 s, so it always finishes before the app's 60 s limit. It may then return fewer links than on a phone.
+  (Cinezo / ScreenScape: about 4–15 s on a phone, about 18–33 s on TV). On TV:
+  - providers stop making new requests after 32 s, so they always finish before the app's 60 s limit;
+  - Cinezo and ScreenScape ask only the 14 servers that actually return links, instead of all ~31.
 
 ## Development
 

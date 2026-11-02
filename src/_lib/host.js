@@ -199,8 +199,17 @@ export var FACTORY_ARGS = ["manifest", "globalThis", "getPreference", "setPrefer
   "setTimeout", "clearTimeout", "setInterval", "clearInterval"];
 
 // runs the plugin factory in its own sandbox; returns { getHome, search, load, loadStreams }
-export function instantiate(make, manifest) {
+// hooks.afterDecrypt(plainText) → plainText: lets a provider adjust decrypted API answers (e.g. a shorter
+// server list on NuvioTV) without touching the SkyStream code.
+export function instantiate(make, manifest, hooks) {
   var host = createHost();
+  if (hooks && typeof hooks.afterDecrypt === "function") {
+    var dec = host.crypto.decryptAES;
+    host.crypto.decryptAES = async function () {
+      var plain = await dec.apply(this, arguments);
+      try { return hooks.afterDecrypt(plain); } catch (e) { return plain; }
+    };
+  }
   var real = typeof globalThis !== "undefined" ? globalThis : {};
   var shadow = Object.create(real);   // reads fall through to the real globals, plugin writes stay here
   var api = make.call(shadow, manifest, shadow, host.getPreference, host.setPreference, host.http_get, host.http_post, host.http_parallel,
