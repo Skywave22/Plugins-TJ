@@ -1,0 +1,17 @@
+{
+  "packageName": "com.cinehd.skystream",
+  "name": "CineHD",
+  "version": 11,
+  "baseUrl": "https://cinehd.vc",
+  "description": "CineHD (cinehd.vc) — movies & series from a TMDB catalog with many servers per title (MhPly/AwsPly Hindi, Nitro multi-audio, HDHub, Rock HLS, MovieBox, VidAPI…). Every link is checked before it is shown; Hindi first.",
+  "authors": [
+    "TJ-Plugins"
+  ],
+  "languages": [
+    "en"
+  ],
+  "categories": [
+    "Movie",
+    "TvSeries"
+  ]
+}
