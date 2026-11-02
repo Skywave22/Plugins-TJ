@@ -1,6 +1,6 @@
 {
   "name": "TJ-Plugins",
-  "version": "1.0.30",
+  "version": "1.0.33",
   "description": "TJ-Plugins providers for Nuvio — Hindi, dubbed, Bollywood and world movies & series.",
   "author": "TJ-Plugins",
   "scrapers": [
@@ -66,6 +66,28 @@
       "contentLanguage": [
         "hi",
         "en",
+        "ta",
+        "te"
+      ]
+    },
+    {
+      "id": "desidubanime",
+      "name": "DesiDubAnime",
+      "description": "Hindi, Tamil, Telugu and multi-audio dubbed anime series and movies (Naruto, Demon Slayer, Attack on Titan, Jujutsu Kaisen and more), HLS with English subtitles. Each site season is matched to its TMDB season.",
+      "version": "1.0.0",
+      "author": "TJ-Plugins",
+      "supportedTypes": [
+        "movie",
+        "tv"
+      ],
+      "filename": "providers/desidubanime.js",
+      "enabled": true,
+      "formats": [
+        "m3u8"
+      ],
+      "logo": "https://www.google.com/s2/favicons?domain=desidubanime.me&sz=128",
+      "contentLanguage": [
+        "hi",
         "ta",
         "te"
       ]
