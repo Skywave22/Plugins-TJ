@@ -209,7 +209,7 @@ async function probe(s) {
   const get = async (u, range) => {
     const ac = new AbortController(); const tm = setTimeout(() => ac.abort(), 20000);
     const r = await fetch(u, { headers: range ? { ...h, Range: "bytes=0-65535" } : h, signal: ac.signal });
-    const chunks = []; let n = 0; const cap = range ? 65536 : (/\.m3u8|mpegurl/i.test(u) ? 4 * 1024 * 1024 : 262144);   // never download a whole video
+    const chunks = []; let n = 0; const cap = range ? 65536 : 4 * 1024 * 1024;   // never download a whole video
     try { for await (const c of r.body) { chunks.push(Buffer.from(c)); n += c.length; if (n >= cap) break; } } catch {}
     ac.abort(); clearTimeout(tm);
     const b = Buffer.concat(chunks);

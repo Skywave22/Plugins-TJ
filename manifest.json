@@ -1,6 +1,6 @@
 {
   "name": "TJ-Plugins",
-  "version": "1.0.14",
+  "version": "1.0.17",
   "description": "TJ-Plugins providers for Nuvio — Hindi, dubbed, Bollywood and world movies & series.",
   "author": "TJ-Plugins",
   "scrapers": [
@@ -195,6 +195,28 @@
         "ur",
         "mal",
         "bn"
+      ]
+    },
+    {
+      "id": "zxcstream",
+      "name": "ZXCStream",
+      "description": "ZXCStream (zxcstream.com) Main Server (vidstuck): Orion (original audio + Hindi dub, up to 1080p), Daedalus and Atlas, with subtitles. Kept under the server's rate limit so the links play.",
+      "version": "1.0.0",
+      "author": "TJ-Plugins",
+      "supportedTypes": [
+        "movie",
+        "tv"
+      ],
+      "filename": "providers/zxcstream.js",
+      "enabled": true,
+      "formats": [
+        "m3u8",
+        "mp4"
+      ],
+      "logo": "https://www.google.com/s2/favicons?domain=zxcstream.com&sz=128",
+      "contentLanguage": [
+        "en",
+        "hi"
       ]
     }
   ]
