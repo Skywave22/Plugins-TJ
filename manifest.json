@@ -1,0 +1,32 @@
+{
+  "name": "TJ-Plugins",
+  "version": "1.0.0",
+  "description": "TJ-Plugins providers for Nuvio — Hindi, dubbed, Bollywood and world movies & series.",
+  "author": "TJ-Plugins",
+  "scrapers": [
+    {
+      "id": "cinezo",
+      "name": "Cinezo",
+      "description": "Cinezo (cinezo.gd) VidNest + ScreenScape servers: Hindi dubs, multi-audio and English up to 4K, with subtitles. Hindi first; every link is checked.",
+      "version": "1.0.0",
+      "author": "TJ-Plugins",
+      "supportedTypes": [
+        "movie",
+        "tv"
+      ],
+      "filename": "providers/cinezo.js",
+      "enabled": true,
+      "formats": [
+        "m3u8",
+        "mp4"
+      ],
+      "logo": "https://www.google.com/s2/favicons?domain=cinezo.gd&sz=128",
+      "contentLanguage": [
+        "hi",
+        "en",
+        "ta",
+        "te"
+      ]
+    }
+  ]
+}
