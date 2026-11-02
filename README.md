@@ -30,6 +30,7 @@ They are the TJ-Plugins (SkyStream) plugins, converted to run as Nuvio providers
 | **MoviesHubHD** | VidNest player network (Delta, Zeta, Alfa, Beta, Catflix…): Hindi + English, multi-audio, up to 4K, subtitles | ✅ | ✅ | ✅ | ✅ |
 | **KatMovieHD** | Hollywood & web series in Hindi dubbed / dual audio: StreamTape, HubCloud, GDFlix (searches the site by title) | ✅ | ✅ | ✅ | ✅ |
 | **SSR Movies** | Hindi dubbed / dual audio movies (480p–4K): Watch HLS, HubCloud, GDFlix. Best for movies; complete-season packs often have no playable file | ✅ | ✅ | ✅ | ✅ |
+| **DesiSerials** | Daily Hindi TV serials & reality shows (Star Plus, Zee, Sony, Colors, Sab, &TV). Episodes matched by TMDB air date. | — | ✅ | ✅ | ✅ |
 
 More providers are being added one at a time.
 

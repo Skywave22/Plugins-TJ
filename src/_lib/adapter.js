@@ -3,8 +3,8 @@
 //   title matching) → the right episode (load) → links (loadStreams) → Nuvio stream objects.
 import { instantiate, dbg, setNetDeadline } from "./host.js";
 import { setT, clearT, cancelAll } from "./timers.js";
-import { parseTitle, loose, isSeries } from "./titles.js";
-import { tmdbInfo } from "./tmdb.js";
+import { parseTitle, loose, isSeries, dateIn } from "./titles.js";
+import { tmdbInfo, episodeAirDate } from "./tmdb.js";
 
 var BUDGET_MS = 52000;   // Nuvio stops a provider after 60 s and then shows nothing from it
 var TV_NET_MS = 32000;   // NuvioTV: no new requests after this (each one blocks; see host.js)
@@ -62,6 +62,10 @@ function pickMatches(list, info) {
 function episodeFrom(item, candSh, info) {
   var eps = (item && item.episodes) || [];
   if (!eps.length) return null;
+  if (info.airDate) {   // daily shows (cfg.byDate): the site lists episodes by air date, not by number
+    var byDay = eps.filter(function (e) { return dateIn(e.name) === info.airDate || dateIn(e.url) === info.airDate; })[0];
+    return byDay ? byDay.url : null;
+  }
   if (info.k === "m") {
     if (eps.length > 2 || (isSeries(item.type) && eps.length > 1)) return null;
     return eps[0].url;
@@ -143,7 +147,7 @@ function toNuvio(s, cfg, info) {
 
 // ───── provider ─────
 // cfg: { id, name, make, manifest, mode: "tmdb" | "search", inlineHls?, maxQueries?, hooks?,
-//        itemUrl?(tm, info), episodeUrl?(tm, info) }   (tmdb mode: the plugin's own URL format; default is its JSON form)
+//        itemUrl?(tm, info), episodeUrl?(tm, info), byDate?, findEpisode?(tm, info, left) }   (byDate: match series episodes by TMDB air date)   (tmdb mode: the plugin's own URL format; default is its JSON form)
 export function makeProvider(cfg) {
   return async function getStreams(tmdbId, mediaType, season, episode) {
     var t0 = now();
@@ -165,7 +169,16 @@ export function makeProvider(cfg) {
           ? JSON.stringify({ type: "tv", id: tm.id, s: info.S, e: info.E, title: tm.title, rt: tm.runtime || null })
           : JSON.stringify({ type: "movie", id: tm.id, title: tm.title, rt: tm.runtime || null });
       } else {
-        var queries = [tm.title].concat(tm.alts).filter(function (q, i, a) { return q && a.indexOf(q) === i; }).slice(0, cfg.maxQueries || 2);
+        if (cfg.byDate && info.k === "s") {
+          info.airDate = await episodeAirDate(tm.id, info.S, info.E);
+          dbg("[tj] air date of S" + info.S + "E" + info.E + ": " + (info.airDate || "unknown"));
+          if (!info.airDate) return [];
+        }
+        if (cfg.findEpisode) {   // provider shortcut that skips the plugin's own search (e.g. a slow site API)
+          try { epUrl = await cfg.findEpisode(tm, info, left); } catch (e) { epUrl = null; }
+          dbg("[tj] findEpisode: " + String(epUrl).slice(0, 160));
+        }
+        var queries = epUrl ? [] : [tm.title].concat(tm.alts).filter(function (q, i, a) { return q && a.indexOf(q) === i; }).slice(0, cfg.maxQueries || 2);
         for (var qi = 0; qi < queries.length && !epUrl && left() > 15000; qi++) {
           var sr = await call(api, "search", [parseTitle(queries[qi]).clean || queries[qi]], Math.min(15000, left() - 12000));
           var cands = sr && sr.success !== false ? pickMatches(sr.data, info) : [];

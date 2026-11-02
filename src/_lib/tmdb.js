@@ -52,3 +52,9 @@ export async function tmdbInfo(rawId, mediaType) {
     runtime: d.runtime || ((d.episode_run_time || [])[0]) || 0, seasons: d.number_of_seasons || 0,
   };
 }
+
+// air date ("YYYY-MM-DD") of one episode, or "" — daily shows are matched to the sites by date
+export async function episodeAirDate(id, season, episode) {
+  var d = await getJson("/tv/" + id + "/season/" + (+season || 1) + "/episode/" + (+episode || 1));
+  return d && d.air_date ? String(d.air_date) : "";
+}

@@ -47,3 +47,15 @@ function loose(norm) { return String(norm).replace(/(.)\1+/g, '$1'); }
 function isSeries(type) { return /series|tv|anime|drama|show/i.test(String(type || '')); }
 
 export { decode, parseTitle, loose, isSeries };
+
+// "12 May 2026", "12th May, 2026", "May 12 2026", "2026-05-12", "12-05-2026" → "2026-05-12" (or "")
+var MONTHS = { jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6, jul: 7, aug: 8, sep: 9, oct: 10, nov: 11, dec: 12 };
+function ymd(y, m, d) { return y + "-" + String(m).padStart(2, "0") + "-" + String(d).padStart(2, "0"); }
+export function dateIn(text) {
+  var t = String(text || ""), m;
+  if ((m = t.match(/\b(\d{1,2})(?:st|nd|rd|th)?[\s.,-]+(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?[\s,.-]+(\d{4})\b/i))) return ymd(m[3], MONTHS[m[2].toLowerCase()], m[1]);
+  if ((m = t.match(/\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+(\d{1,2})(?:st|nd|rd|th)?,?\s+(\d{4})\b/i))) return ymd(m[3], MONTHS[m[1].toLowerCase()], m[2]);
+  if ((m = t.match(/\b(\d{4})-(\d{2})-(\d{2})\b/))) return ymd(m[1], +m[2], +m[3]);
+  if ((m = t.match(/\b(\d{1,2})[-/.](\d{1,2})[-/.](\d{4})\b/))) return ymd(m[3], +m[2], +m[1]);
+  return "";
+}
