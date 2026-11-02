@@ -1,0 +1,26 @@
+{
+  "packageName": "com.katmoviehd.skystream",
+  "name": "KatMovieHD",
+  "version": 13,
+  "baseUrl": "https://new.katmoviehd.top",
+  "domains": [
+    {
+      "name": "new.katmoviehd.top (primary)",
+      "url": "https://new.katmoviehd.top"
+    }
+  ],
+  "description": "KatMovieHD — Hollywood & web series in Hindi dubbed / dual audio. Movies in every posted quality (StreamTape, HubCloud, GDFlix Instant / Drive), series with full episode lists and other seasons merged in. Links are checked before they are shown.",
+  "authors": [
+    "TJ-Plugins"
+  ],
+  "languages": [
+    "hi",
+    "en"
+  ],
+  "categories": [
+    "Movies",
+    "Series",
+    "Anime"
+  ],
+  "isAdult": false
+}

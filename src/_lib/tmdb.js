@@ -40,7 +40,7 @@ export async function tmdbInfo(rawId, mediaType) {
   var original = type === "tv" ? d.original_name : d.original_title;
   var date = (type === "tv" ? d.first_air_date : d.release_date) || "";
   var altList = ((d.alternative_titles || {}).titles || (d.alternative_titles || {}).results || [])
-    .filter(function (a) { return /^(US|GB|IN|PK)$/.test(a.iso_3166_1) && latin(a.title); })
+    .filter(function (a) { return /^(US|GB|IN|PK)$/.test(a.iso_3166_1) && latin(a.title) && !/welsh|scottish|gaelic|irish|cornish|working|spelling/i.test(a.type || ""); })
     .map(function (a) { return a.title; });
   var alts = [];
   [original].concat(altList).forEach(function (t) {

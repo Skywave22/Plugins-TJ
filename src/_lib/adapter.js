@@ -54,7 +54,7 @@ function pickMatches(list, info) {
       if (!sh && info.y && y && Math.abs(info.y - y) > 1 && S === 1) return;
     }
     var score = (exactId ? 10 : 0) + (sh && sh === (info.S || 0) ? 4 : 0) + (y && info.y && Math.abs(y - info.y) <= 1 ? 2 : 0) + (it.posterUrl ? 1 : 0) - pos * 0.01;
-    out.push({ url: it.url, sh: sh, score: score });
+    out.push({ url: it.url, sh: sh, score: score, title: String(it.title) });
   });
   return out.sort(function (a, b) { return b.score - a.score; }).slice(0, 3);
 }
@@ -133,7 +133,7 @@ function toNuvio(s, cfg, info) {
     quality: qualityOf(text),
     provider: cfg.id,
   };
-  var lang = languageOf(text); if (lang) o.language = lang;
+  var lang = languageOf(text) || (info.hitTitle ? languageOf(info.hitTitle) : ""); if (lang) o.language = lang;   // search sites: the post says "Hindi Dubbed"
   var size = sizeOf(text); if (size) o.size = size;
   if (Object.keys(headers).length) o.headers = headers;
   if (subs.length) o.subtitles = subs;
@@ -169,9 +169,12 @@ export function makeProvider(cfg) {
         for (var qi = 0; qi < queries.length && !epUrl && left() > 15000; qi++) {
           var sr = await call(api, "search", [parseTitle(queries[qi]).clean || queries[qi]], Math.min(15000, left() - 12000));
           var cands = sr && sr.success !== false ? pickMatches(sr.data, info) : [];
+          dbg("[tj] search " + JSON.stringify(queries[qi]) + ": " + ((sr && sr.data) || []).slice(0, 8).map(function (x) { return x && (x.title + " (" + (x.year || "") + "," + (x.type || "") + ")"); }).join(" | ") + " → " + cands.length + " match(es)");
           for (var ci = 0; ci < cands.length && !epUrl && left() > 12000; ci++) {
             var lr = await call(api, "load", [cands[ci].url], Math.min(15000, left() - 10000));
             if (lr && lr.success !== false && lr.data) epUrl = episodeFrom(lr.data, cands[ci].sh, info);
+            if (epUrl) info.hitTitle = cands[ci].title + " " + String((lr.data && lr.data.title) || "");
+            dbg("[tj] load " + String(cands[ci].url).slice(0, 100) + ": " + (lr && lr.data ? (lr.data.type + ", " + ((lr.data.episodes || []).length) + " episode(s): " + (lr.data.episodes || []).slice(0, 4).map(function (e) { return "S" + e.season + "E" + e.episode + " " + String(e.name || "").slice(0, 30); }).join(" | ")) : JSON.stringify(lr).slice(0, 160)));
           }
         }
       }

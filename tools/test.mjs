@@ -16,6 +16,8 @@
  *   node tools/test.mjs <id> <tmdbId> [movie|tv] [season] [episode] [--check] [--tv] [--debug] [--log] [--http]
  *   --tv     run in the NuvioTV runtime instead (own polyfill, blocking fetch, real CryptoJS, no setTimeout)
  */
+// --curl <regex|all>: requests to matching URLs go through curl (see tools/lib/fetch-emu.mjs)
+{ const i = process.argv.indexOf("--curl"); if (i > 0 && process.argv[i + 1]) { process.env.NUVIO_CURL = process.argv[i + 1]; process.argv.splice(i, 2); } }
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";

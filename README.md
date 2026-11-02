@@ -28,6 +28,7 @@ They are the TJ-Plugins (SkyStream) plugins, converted to run as Nuvio providers
 | **HiStream** | HiStream player servers: Hindi first, Bollywood, Hindi series and platform originals | ✅ | ✅ | ✅ | ✅ |
 | **ZXCStream** | Ad-free Main Server (vidstuck): Orion original audio + Hindi dub up to 1080p, Atlas, Daedalus, with subtitles | ✅ | ✅ | ✅ | ✅ |
 | **MoviesHubHD** | VidNest player network (Delta, Zeta, Alfa, Beta, Catflix…): Hindi + English, multi-audio, up to 4K, subtitles | ✅ | ✅ | ✅ | ✅ |
+| **KatMovieHD** | Hollywood & web series in Hindi dubbed / dual audio: StreamTape, HubCloud, GDFlix (searches the site by title) | ✅ | ✅ | ✅ | ✅ |
 
 More providers are being added one at a time.
 
@@ -81,5 +82,7 @@ Options:
 - `--tv`: use the NuvioTV runtime (blocking fetch, no timers, CryptoJS).
 - `--debug`: show the provider's internal steps.
 - `--http`: list every request.
+- `--curl <regex|all>`: send matching requests through curl. Some file hosts (GDFlix) reject Node's TLS
+  fingerprint but accept curl's and OkHttp's (the apps), e.g. `--curl "kmhd|gdflix"`.
 
 Author: **TJ-Plugins**

@@ -1,7 +1,7 @@
 {
   "name": "HiStream",
   "description": "HiStream (histream.lol) player servers: Hindi first, then English, Tamil and Telugu; Bollywood, Hindi series and platform originals. Every link is checked before it is shown.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "supportedTypes": [
     "movie",
     "tv"

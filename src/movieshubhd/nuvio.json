@@ -1,7 +1,7 @@
 {
   "name": "MoviesHubHD",
   "description": "MoviesHubHD (movieshubhd.com) player network: Hindi + English tracks, multi-audio, up to 4K, with subtitles where available. Hindi first; every link is checked.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "supportedTypes": [
     "movie",
     "tv"
