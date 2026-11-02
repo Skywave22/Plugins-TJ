@@ -29,6 +29,7 @@ They are the TJ-Plugins (SkyStream) plugins, converted to run as Nuvio providers
 | **ZXCStream** | Ad-free Main Server (vidstuck): Orion original audio + Hindi dub up to 1080p, Atlas, Daedalus, with subtitles | ✅ | ✅ | ✅ | ✅ |
 | **MoviesHubHD** | VidNest player network (Delta, Zeta, Alfa, Beta, Catflix…): Hindi + English, multi-audio, up to 4K, subtitles | ✅ | ✅ | ✅ | ✅ |
 | **KatMovieHD** | Hollywood & web series in Hindi dubbed / dual audio: StreamTape, HubCloud, GDFlix (searches the site by title) | ✅ | ✅ | ✅ | ✅ |
+| **SSR Movies** | Hindi dubbed / dual audio movies (480p–4K): Watch HLS, HubCloud, GDFlix. Best for movies; complete-season packs often have no playable file | ✅ | ✅ | ✅ | ✅ |
 
 More providers are being added one at a time.
 

@@ -1,6 +1,6 @@
 {
   "name": "TJ-Plugins",
-  "version": "1.0.25",
+  "version": "1.0.26",
   "description": "TJ-Plugins providers for Nuvio — Hindi, dubbed, Bollywood and world movies & series.",
   "author": "TJ-Plugins",
   "scrapers": [
@@ -213,6 +213,29 @@
         "te",
         "ko",
         "ja"
+      ]
+    },
+    {
+      "id": "ssrmovies",
+      "name": "SSR Movies",
+      "description": "SSR Movies (ssrmovies.surf) - Hindi dubbed and dual audio movies, Bollywood, Hollywood, web series, TV and WWE shows in 480p to 4K. Daily shows list every episode by date. Streams come from Watch (HLS), HubCloud, GDFlix and Direct-Cloud mirrors resolved to direct files.",
+      "version": "1.0.0",
+      "author": "TJ-Plugins",
+      "supportedTypes": [
+        "movie",
+        "tv"
+      ],
+      "filename": "providers/ssrmovies.js",
+      "enabled": true,
+      "formats": [
+        "m3u8",
+        "mp4",
+        "mkv"
+      ],
+      "logo": "https://www.google.com/s2/favicons?domain=ssrmovies.garden&sz=128",
+      "contentLanguage": [
+        "hi",
+        "en"
       ]
     },
     {
