@@ -1,7 +1,7 @@
 {
   "name": "CineHD",
   "description": "CineHD (cinehd.vc) — movies & series from a TMDB catalog with many servers per title (MhPly/AwsPly Hindi, Nitro multi-audio, HDHub, Rock HLS, MovieBox, VidAPI…). Every link is checked before it is shown; Hindi first.",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "supportedTypes": [
     "movie",
     "tv"

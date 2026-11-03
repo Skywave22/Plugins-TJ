@@ -1,7 +1,7 @@
 {
   "name": "DesiDubAnime",
   "description": "Hindi, Tamil, Telugu and multi-audio dubbed anime series and movies (Naruto, Demon Slayer, Attack on Titan, Jujutsu Kaisen and more), HLS with English subtitles. Each site season is matched to its TMDB season.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "supportedTypes": [
     "movie",
     "tv"

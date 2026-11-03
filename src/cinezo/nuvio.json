@@ -1,7 +1,7 @@
 {
   "name": "Cinezo",
   "description": "Cinezo (cinezo.gd) VidNest + ScreenScape servers: Hindi dubs, multi-audio and English up to 4K, with subtitles. Hindi first; every link is checked.",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "supportedTypes": [
     "movie",
     "tv"

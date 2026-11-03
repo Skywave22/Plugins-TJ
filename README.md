@@ -32,6 +32,7 @@ They are the TJ-Plugins (SkyStream) plugins, converted to run as Nuvio providers
 | **SSR Movies** | Hindi dubbed / dual audio movies (480p–4K): Watch HLS, HubCloud, GDFlix. Best for movies; complete-season packs often have no playable file | ✅ | ✅ | ✅ | ✅ |
 | **DesiSerials** | Daily Hindi TV serials & reality shows (Star Plus, Zee, Sony, Colors, Sab, &TV). Episodes matched by TMDB air date. | — | ✅ | ✅ | ✅ |
 | **DesiDubAnime** | Hindi / Tamil / Telugu dubbed anime (series + movies) with English subtitles. Plays the VidMoly mirror; the site's own P2P player is currently down, so some episodes have no link. | ✅ | ✅ | ✅ | ✅ |
+| **Bingr** | Movies, TV & anime from bingr.one: Prism multi-audio (Hindi, Telugu, Tamil, English, French…) up to 1080p, Edge, Nimbus, Citadel (Hindi/Tamil/Telugu/Kannada dubs), with subtitles | ✅ | ✅ | ✅ | ✅ |
 
 More providers are being added one at a time.
 

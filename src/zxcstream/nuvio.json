@@ -1,7 +1,7 @@
 {
   "name": "ZXCStream",
   "description": "ZXCStream (zxcstream.com) Main Server (vidstuck): Orion (original audio + Hindi dub, up to 1080p), Daedalus and Atlas, with subtitles. Kept under the server's rate limit so the links play.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "supportedTypes": [
     "movie",
     "tv"
