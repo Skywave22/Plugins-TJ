@@ -36,6 +36,7 @@ They are the TJ-Plugins (SkyStream) plugins, converted to run as Nuvio providers
 | **AniHype** | Anime from anihype.sbs: TryEmbed Sub + English Dub (1080p), Katana Sub (1080p), Uqload (Japanese + English audio), Orion (Japanese, English, Hindi, Tamil, Telugu, Malayalam, Kannada, French; HEVC), Mikaza Hindi Dub, with English subtitles. TMDB titles are mapped to the right AniList season / part | ✅ | ✅ | ✅ | ✅ |
 | **RareAnimes** | Hindi, Tamil, Telugu and Malayalam dubbed anime, cartoons and animated movies from rareanimes.mov (Rare Toons India) - every audio language of an episode, direct HD files from StreamBeta | ✅ | ✅ | ✅ | ✅ |
 | **SubDubAnime** | Hindi and English dubbed (and subbed) anime series and movies from subdubanime.site, up to 1080p - every language version of a title (Hindi Dubbed, Hindi Fan Dubbed, English Dubbed…) | ✅ | ✅ | ✅ | ✅ |
+| **KatDrama** | Korean and Chinese dramas and movies in Hindi, dual audio and English from new.katdrama.my - HubCloud and StreamTape, 480p-1080p | ✅ | ✅ | ✅ | ✅ |
 
 More providers are being added one at a time.
 

@@ -1,0 +1,27 @@
+{
+  "packageName": "com.katdrama.skystream",
+  "name": "KatDrama",
+  "version": 2,
+  "baseUrl": "https://new.katdrama.my",
+  "domains": [
+    {
+      "name": "new.katdrama.my (primary)",
+      "url": "https://new.katdrama.my"
+    }
+  ],
+  "description": "Korean & Chinese dramas in Hindi, dual audio & English dubbed from KatDrama — per-episode packs, working GDFlix instant links",
+  "authors": [
+    "TJ-Plugins"
+  ],
+  "languages": [
+    "hi",
+    "en",
+    "ko",
+    "zh"
+  ],
+  "categories": [
+    "Series",
+    "Movies"
+  ],
+  "isAdult": false
+}

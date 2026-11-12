@@ -35,6 +35,8 @@ function parseTitle(raw) {
     var clean = c.replace(TAG_RE, function (x, w, off) { return off > 0 ? ' ' : x; })
         .replace(/[(\[{]\s*[)\]}]/g, ' ').replace(/[(\[{][^)\]}]*$/, ' ').replace(/[\s:–—,-]+$/, '').replace(/\s+/g, ' ').trim();
     if (clean.length < 2) clean = decode(raw).trim();
+    // "Squid Game 3 (Season 3)": a trailing number equal to the season is the season, not part of the name
+    if (sh && clean.length > 4) clean = clean.replace(new RegExp('\\s+0*' + sh + '$'), '').trim() || clean;
     var norm = clean.normalize ? clean.normalize('NFKD').replace(/[\u0300-\u036f]/g, '') : clean;
     norm = norm.toLowerCase().replace(/&/g, ' and ').replace(/['’`]/g, '').replace(/[^a-z0-9\u0900-\u097f\u0600-\u06ff\u3040-\u30ff\u4e00-\u9fff\uac00-\ud7af]+/g, ' ').trim();
     norm = norm.replace(/^the\s+/, '').replace(/\s+the\s+movie$/, '');

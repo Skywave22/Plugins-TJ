@@ -1,0 +1,20 @@
+{
+  "name": "KatDrama",
+  "description": "KatDrama (new.katdrama.my): Korean and Chinese dramas and movies in Hindi, dual audio and English, from HubCloud and StreamTape (480p-1080p); every link is checked.",
+  "version": "1.0.0",
+  "supportedTypes": [
+    "movie",
+    "tv"
+  ],
+  "formats": [
+    "mp4",
+    "mkv"
+  ],
+  "logo": "https://www.google.com/s2/favicons?domain=new.katdrama.my&sz=128",
+  "contentLanguage": [
+    "hi",
+    "en",
+    "ko",
+    "zh"
+  ]
+}

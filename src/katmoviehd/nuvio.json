@@ -1,7 +1,7 @@
 {
   "name": "KatMovieHD",
   "description": "KatMovieHD — Hollywood & web series in Hindi dubbed / dual audio. Movies in every posted quality (StreamTape, HubCloud, GDFlix Instant / Drive), series with full episode lists and other seasons merged in. Links are checked before they are shown.",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "supportedTypes": [
     "movie",
     "tv"
