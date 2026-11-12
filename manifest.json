@@ -1,6 +1,6 @@
 {
   "name": "TJ-Plugins",
-  "version": "1.0.37",
+  "version": "1.0.40",
   "description": "TJ-Plugins providers for Nuvio — Hindi, dubbed, Bollywood and world movies & series.",
   "author": "TJ-Plugins",
   "scrapers": [
@@ -251,6 +251,30 @@
       "contentLanguage": [
         "hi",
         "en"
+      ]
+    },
+    {
+      "id": "rareanimes",
+      "name": "RareAnimes",
+      "description": "RareAnimes / Rare Toons India (rareanimes.mov): Hindi, Tamil, Telugu and Malayalam dubbed anime, cartoons and animated movies. Every audio language of an episode is listed, played as direct HD files from the site's StreamBeta servers; every link is checked.",
+      "version": "1.0.0",
+      "author": "TJ-Plugins",
+      "supportedTypes": [
+        "movie",
+        "tv"
+      ],
+      "filename": "providers/rareanimes.js",
+      "enabled": true,
+      "formats": [
+        "mp4",
+        "mkv"
+      ],
+      "logo": "https://www.google.com/s2/favicons?domain=rareanimes.mov&sz=128",
+      "contentLanguage": [
+        "hi",
+        "ta",
+        "te",
+        "ml"
       ]
     },
     {

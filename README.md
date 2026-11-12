@@ -34,6 +34,7 @@ They are the TJ-Plugins (SkyStream) plugins, converted to run as Nuvio providers
 | **DesiDubAnime** | Hindi / Tamil / Telugu dubbed anime (series + movies) with English subtitles. Plays the VidMoly mirror; the site's own P2P player is currently down, so some episodes have no link. | ✅ | ✅ | ✅ | ✅ |
 | **Bingr** | Movies, TV & anime from bingr.one: Prism multi-audio (Hindi, Telugu, Tamil, English, French…) up to 1080p, Edge, Nimbus, Citadel (Hindi/Tamil/Telugu/Kannada dubs), with subtitles | ✅ | ✅ | ✅ | ✅ |
 | **AniHype** | Anime from anihype.sbs: TryEmbed Sub + English Dub (1080p), Katana Sub (1080p), Uqload (Japanese + English audio), Orion (Japanese, English, Hindi, Tamil, Telugu, Malayalam, Kannada, French; HEVC), Mikaza Hindi Dub, with English subtitles. TMDB titles are mapped to the right AniList season / part | ✅ | ✅ | ✅ | ✅ |
+| **RareAnimes** | Hindi, Tamil, Telugu and Malayalam dubbed anime, cartoons and animated movies from rareanimes.mov (Rare Toons India) - every audio language of an episode, direct HD files from StreamBeta | ✅ | ✅ | ✅ | ✅ |
 
 More providers are being added one at a time.
 

@@ -1,0 +1,20 @@
+{
+  "name": "RareAnimes",
+  "description": "RareAnimes / Rare Toons India (rareanimes.mov): Hindi, Tamil, Telugu and Malayalam dubbed anime, cartoons and animated movies. Every audio language of an episode is listed, played as direct HD files from the site's StreamBeta servers; every link is checked.",
+  "version": "1.0.0",
+  "supportedTypes": [
+    "movie",
+    "tv"
+  ],
+  "formats": [
+    "mp4",
+    "mkv"
+  ],
+  "logo": "https://www.google.com/s2/favicons?domain=rareanimes.mov&sz=128",
+  "contentLanguage": [
+    "hi",
+    "ta",
+    "te",
+    "ml"
+  ]
+}
