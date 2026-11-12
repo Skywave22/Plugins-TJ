@@ -1,6 +1,6 @@
 {
   "name": "TJ-Plugins",
-  "version": "1.0.46",
+  "version": "1.0.53",
   "description": "TJ-Plugins providers for Nuvio — Hindi, dubbed, Bollywood and world movies & series.",
   "author": "TJ-Plugins",
   "scrapers": [
@@ -8,7 +8,7 @@
       "id": "anihype",
       "name": "AniHype",
       "description": "AniHype (anihype.sbs) anime servers: TryEmbed Japanese+English Sub and English Dub (1080p), Katana Sub (1080p), Uqload (Japanese + English audio), Orion (Japanese, English, Hindi, Tamil, Telugu, Malayalam, Kannada, French; HEVC) and Mikaza Hindi Dub, with English subtitles. TMDB titles are mapped to the right AniList season; every link is checked.",
-      "version": "1.0.1",
+      "version": "1.0.3",
       "author": "TJ-Plugins",
       "supportedTypes": [
         "movie",
@@ -33,7 +33,7 @@
       "id": "bingr",
       "name": "Bingr",
       "description": "Bingr (bingr.one) servers: Prism multi-audio (Hindi, Telugu, Tamil, English, French and more) up to 1080p, Edge, Nimbus and Citadel (Hindi, Tamil, Telugu, Kannada dubs), with subtitles. Hindi first; every link is checked.",
-      "version": "1.0.1",
+      "version": "1.0.3",
       "author": "TJ-Plugins",
       "supportedTypes": [
         "movie",
@@ -57,7 +57,7 @@
       "id": "cinehd",
       "name": "CineHD",
       "description": "CineHD (cinehd.vc) — movies & series from a TMDB catalog with many servers per title (MhPly/AwsPly Hindi, Nitro multi-audio, HDHub, Rock HLS, MovieBox, VidAPI…). Every link is checked before it is shown; Hindi first.",
-      "version": "1.0.6",
+      "version": "1.0.8",
       "author": "TJ-Plugins",
       "supportedTypes": [
         "movie",
@@ -78,7 +78,7 @@
       "id": "cinejoy",
       "name": "CineJoy",
       "description": "CineJoy (cinejoy.pk) — movies & series from a TMDB catalog (Netflix/Prime rows) with many servers per title: Nitro multi-audio, MhPly/AwsPly Hindi, HDHub, VidAPI, MovieBox, Rock HLS. Links are checked before they are shown.",
-      "version": "1.0.5",
+      "version": "1.0.7",
       "author": "TJ-Plugins",
       "supportedTypes": [
         "movie",
@@ -99,7 +99,7 @@
       "id": "cinezo",
       "name": "Cinezo",
       "description": "Cinezo (cinezo.gd) VidNest + ScreenScape servers: Hindi dubs, multi-audio and English up to 4K, with subtitles. Hindi first; every link is checked.",
-      "version": "1.0.8",
+      "version": "1.0.10",
       "author": "TJ-Plugins",
       "supportedTypes": [
         "movie",
@@ -123,7 +123,7 @@
       "id": "desidubanime",
       "name": "DesiDubAnime",
       "description": "Hindi, Tamil, Telugu and multi-audio dubbed anime series and movies (Naruto, Demon Slayer, Attack on Titan, Jujutsu Kaisen and more), HLS with English subtitles. Each site season is matched to its TMDB season.",
-      "version": "1.0.4",
+      "version": "1.0.6",
       "author": "TJ-Plugins",
       "supportedTypes": [
         "movie",
@@ -145,7 +145,7 @@
       "id": "desiserials",
       "name": "DesiSerials",
       "description": "Daily Hindi TV serials and reality shows (Star Plus, Zee TV, Sony, Colors, Sab TV, & TV) plus completed shows. Episodes are matched by air date; TVLogy HLS and direct files.",
-      "version": "1.0.2",
+      "version": "1.0.4",
       "author": "TJ-Plugins",
       "supportedTypes": [
         "tv"
@@ -165,7 +165,7 @@
       "id": "fmovies",
       "name": "FMovies",
       "description": "FMoviess (fmoviess.tv) — HD movies & TV shows with Trending / Latest rows. MoviesAPI multi-quality HLS with subtitles, plus a VidAPI/MovieBox backup for titles MoviesAPI lacks (and VixSrc where reachable). Every link is checked before it is shown.",
-      "version": "1.0.4",
+      "version": "1.0.6",
       "author": "TJ-Plugins",
       "supportedTypes": [
         "movie",
@@ -186,7 +186,7 @@
       "id": "histream",
       "name": "HiStream",
       "description": "HiStream (histream.lol) player servers: Hindi first, then English, Tamil and Telugu; Bollywood, Hindi series and platform originals. Every link is checked before it is shown.",
-      "version": "1.0.4",
+      "version": "1.0.6",
       "author": "TJ-Plugins",
       "supportedTypes": [
         "movie",
@@ -212,7 +212,7 @@
       "id": "katdrama",
       "name": "KatDrama",
       "description": "KatDrama (new.katdrama.my): Korean and Chinese dramas and movies in Hindi, dual audio and English, from HubCloud and StreamTape (480p-1080p); every link is checked.",
-      "version": "1.0.0",
+      "version": "1.0.2",
       "author": "TJ-Plugins",
       "supportedTypes": [
         "movie",
@@ -236,7 +236,7 @@
       "id": "katmoviehd",
       "name": "KatMovieHD",
       "description": "KatMovieHD — Hollywood & web series in Hindi dubbed / dual audio. Movies in every posted quality (StreamTape, HubCloud, GDFlix Instant / Drive), series with full episode lists and other seasons merged in. Links are checked before they are shown.",
-      "version": "1.0.5",
+      "version": "1.0.9",
       "author": "TJ-Plugins",
       "supportedTypes": [
         "movie",
@@ -256,10 +256,32 @@
       ]
     },
     {
+      "id": "kdmaza",
+      "name": "KDMaza",
+      "description": "KDMaza (kdramasmaza.net): Korean, Chinese and Turkish dramas, Korean movies and anime in Hindi/Urdu, from HubCloud and GDFlix; every link is checked.",
+      "version": "1.0.0",
+      "author": "TJ-Plugins",
+      "supportedTypes": [
+        "tv"
+      ],
+      "filename": "providers/kdmaza.js",
+      "enabled": true,
+      "formats": [
+        "mp4",
+        "mkv"
+      ],
+      "logo": "https://www.google.com/s2/favicons?domain=kdramasmaza.net&sz=128",
+      "contentLanguage": [
+        "en",
+        "hi",
+        "ur"
+      ]
+    },
+    {
       "id": "movieshubhd",
       "name": "MoviesHubHD",
       "description": "MoviesHubHD (movieshubhd.com) player network: Hindi + English tracks, multi-audio, up to 4K, with subtitles where available. Hindi first; every link is checked.",
-      "version": "1.0.4",
+      "version": "1.0.6",
       "author": "TJ-Plugins",
       "supportedTypes": [
         "movie",
@@ -281,7 +303,7 @@
       "id": "rareanimes",
       "name": "RareAnimes",
       "description": "RareAnimes / Rare Toons India (rareanimes.mov): Hindi, Tamil, Telugu and Malayalam dubbed anime, cartoons and animated movies. Every audio language of an episode is listed, played as direct HD files from the site's StreamBeta servers; every link is checked.",
-      "version": "1.0.1",
+      "version": "1.0.3",
       "author": "TJ-Plugins",
       "supportedTypes": [
         "movie",
@@ -305,7 +327,7 @@
       "id": "rivestream",
       "name": "RiveStream",
       "description": "RiveStream (rivestream.ru) - TMDB-powered catalog of movies and TV shows, streamed from rivestream's server backends (Citadel, Prvibd, River, Kutti, Gbru, HindiSk) plus MhPly, AwsPly, VidPi and HDHub as fallbacks. Hindi audio is listed first, then English, Tamil, Telugu, Urdu, Malayalam and Bengali.",
-      "version": "1.0.4",
+      "version": "1.0.6",
       "author": "TJ-Plugins",
       "supportedTypes": [
         "movie",
@@ -332,7 +354,7 @@
       "id": "screenscape",
       "name": "ScreenScape",
       "description": "ScreenScape (screenscape.me) Scape servers: 30+ servers per title (Hindi dubs, Nitro multi-audio, Citadel, 4K-Hub…). Hindi first; every link is checked.",
-      "version": "1.0.6",
+      "version": "1.0.8",
       "author": "TJ-Plugins",
       "supportedTypes": [
         "movie",
@@ -358,7 +380,7 @@
       "id": "ssrmovies",
       "name": "SSR Movies",
       "description": "SSR Movies (ssrmovies.surf) - Hindi dubbed and dual audio movies, Bollywood, Hollywood, web series, TV and WWE shows in 480p to 4K. Daily shows list every episode by date. Streams come from Watch (HLS), HubCloud, GDFlix and Direct-Cloud mirrors resolved to direct files.",
-      "version": "1.0.3",
+      "version": "1.0.5",
       "author": "TJ-Plugins",
       "supportedTypes": [
         "movie",
@@ -381,7 +403,7 @@
       "id": "subdubanime",
       "name": "SubDubAnime",
       "description": "SubDubAnime (subdubanime.site): Hindi and English dubbed (and subbed) anime series and movies, up to 1080p. Every language version of a title is listed (Hindi Dubbed, Hindi Fan Dubbed, English Dubbed...); every link is checked.",
-      "version": "1.0.1",
+      "version": "1.0.3",
       "author": "TJ-Plugins",
       "supportedTypes": [
         "movie",
@@ -403,7 +425,7 @@
       "id": "vidbox",
       "name": "Vidbox",
       "description": "Vidbox (vidbox.vc) - TMDB catalog of movies and TV shows with Nxsha multi-language servers. Hindi audio first, then English, Tamil, Telugu, Urdu, Malayalam and Bengali. Every link is checked before it is shown.",
-      "version": "1.0.4",
+      "version": "1.0.6",
       "author": "TJ-Plugins",
       "supportedTypes": [
         "movie",
@@ -430,7 +452,7 @@
       "id": "zxcstream",
       "name": "ZXCStream",
       "description": "ZXCStream (zxcstream.com) Main Server (vidstuck): Orion (original audio + Hindi dub, up to 1080p), Daedalus and Atlas, with subtitles. Kept under the server's rate limit so the links play.",
-      "version": "1.0.4",
+      "version": "1.0.6",
       "author": "TJ-Plugins",
       "supportedTypes": [
         "movie",

@@ -1,7 +1,7 @@
 {
   "name": "Bingr",
   "description": "Bingr (bingr.one) servers: Prism multi-audio (Hindi, Telugu, Tamil, English, French and more) up to 1080p, Edge, Nimbus and Citadel (Hindi, Tamil, Telugu, Kannada dubs), with subtitles. Hindi first; every link is checked.",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "supportedTypes": [
     "movie",
     "tv"

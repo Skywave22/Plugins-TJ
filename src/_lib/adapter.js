@@ -37,6 +37,10 @@ export function call(api, fn, args, ms) {
 // ───── matching a search hit / episode (same rules as the SkyStream All-in-one) ─────
 function pickMatches(list, info) {
   var wants = [info.t].concat(info.alts || []).map(function (t) { return loose(parseTitle(t).norm); });
+  var nameYears = [];
+  [info.t].concat(info.alts || []).forEach(function (t) { (String(t || "").match(/\b(?:19|20)\d{2}\b/g) || []).forEach(function (n) { if (nameYears.indexOf(n) < 0) nameYears.push(n); }); });
+  if (nameYears.length && !/\b(?:19|20)\d{2}\b/.test(String(info.t || ""))) nameYears = [];   // only when the main title has it
+  if (nameYears.length && info.y) wants.push(loose(parseTitle(info.t + " (" + info.y + ")").norm));   // "blade runner 2049"
   var out = [];
   (list || []).slice(0, 30).forEach(function (it, pos) {
     if (!it || !it.title || !it.url) return;
@@ -44,6 +48,16 @@ function pickMatches(list, info) {
     var exactId = info.id && new RegExp("[\"/=:]" + info.id + "(?![0-9])").test(String(it.url)) && /tmdb|"id"/i.test(String(it.url));
     if (!exactId && wants.indexOf(loose(p.norm)) < 0) return;
     var y = it.year ? +String(it.year).slice(0, 4) || p.year : p.year;
+    // a year that is part of the name ("Reply 1988", "Blade Runner 2049") is not a release year,
+    // and the hit must carry the same number ("Reply 1994" is another show)
+    if (nameYears.length) {
+      if (!nameYears.some(function (n) { return new RegExp("\\b" + n + "\\b").test(String(it.title)); })) return;
+      if (y && nameYears.indexOf(String(y)) >= 0) {   // the card's "year" is the name's number: use a real "(2017)" if any
+        var ry = (String(it.title).match(/[(\[]\s*((?:19|20)\d{2})\s*[)\]]/g) || []).map(function (x) { return x.replace(/\D/g, ""); })
+          .filter(function (n) { return nameYears.indexOf(n) < 0; })[0];
+        y = ry ? +ry : null;
+      }
+    }
     var sh = p.sh || 0;
     if (info.k === "m") {
       if (sh || (isSeries(it.type) && !/anime/i.test(it.type))) return;

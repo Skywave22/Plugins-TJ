@@ -1,0 +1,18 @@
+{
+  "name": "KDMaza",
+  "description": "KDMaza (kdramasmaza.net): Korean, Chinese and Turkish dramas, Korean movies and anime in Hindi/Urdu, from HubCloud and GDFlix; every link is checked.",
+  "version": "1.0.0",
+  "supportedTypes": [
+    "tv"
+  ],
+  "formats": [
+    "mp4",
+    "mkv"
+  ],
+  "logo": "https://www.google.com/s2/favicons?domain=kdramasmaza.net&sz=128",
+  "contentLanguage": [
+    "en",
+    "hi",
+    "ur"
+  ]
+}

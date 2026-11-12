@@ -1,7 +1,7 @@
 {
   "name": "AniHype",
   "description": "AniHype (anihype.sbs) anime servers: TryEmbed Japanese+English Sub and English Dub (1080p), Katana Sub (1080p), Uqload (Japanese + English audio), Orion (Japanese, English, Hindi, Tamil, Telugu, Malayalam, Kannada, French; HEVC) and Mikaza Hindi Dub, with English subtitles. TMDB titles are mapped to the right AniList season; every link is checked.",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "supportedTypes": [
     "movie",
     "tv"

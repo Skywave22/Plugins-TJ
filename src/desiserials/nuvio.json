@@ -1,7 +1,7 @@
 {
   "name": "DesiSerials",
   "description": "Daily Hindi TV serials and reality shows (Star Plus, Zee TV, Sony, Colors, Sab TV, & TV) plus completed shows. Episodes are matched by air date; TVLogy HLS and direct files.",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "supportedTypes": [
     "tv"
   ],
