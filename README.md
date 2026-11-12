@@ -38,6 +38,7 @@ They are the TJ-Plugins (SkyStream) plugins, converted to run as Nuvio providers
 | **SubDubAnime** | Hindi and English dubbed (and subbed) anime series and movies from subdubanime.site, up to 1080p - every language version of a title (Hindi Dubbed, Hindi Fan Dubbed, English Dubbed…) | ✅ | ✅ | ✅ | ✅ |
 | **KatDrama** | Korean and Chinese dramas and movies in Hindi, dual audio and English from new.katdrama.my - HubCloud and StreamTape, 480p-1080p | ✅ | ✅ | ✅ | ✅ |
 | **KDMaza** | Korean, Chinese and Turkish dramas, Korean movies and anime in Hindi/Urdu from kdramasmaza.net - HubCloud and GDFlix | ✅ | ✅ | ✅ | ✅ |
+| **HiCine** | Hollywood, Bollywood, K-Drama and anime movies and series from hicine.sbs, dual audio Hindi, up to 1080p - FSL, PixelDrain and more | ✅ | ✅ | ✅ | ✅ |
 
 More providers are being added one at a time.
 

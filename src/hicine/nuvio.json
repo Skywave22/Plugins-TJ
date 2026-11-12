@@ -1,0 +1,18 @@
+{
+  "name": "HiCine",
+  "description": "HiCine (hicine.sbs): Hollywood, Bollywood, K-Drama and anime movies and series, dual audio Hindi, up to 1080p from FSL, PixelDrain and other direct servers; every link is checked.",
+  "version": "1.0.0",
+  "supportedTypes": [
+    "movie",
+    "tv"
+  ],
+  "formats": [
+    "mp4",
+    "mkv"
+  ],
+  "logo": "https://www.google.com/s2/favicons?domain=hicine.sbs&sz=128",
+  "contentLanguage": [
+    "hi",
+    "en"
+  ]
+}
