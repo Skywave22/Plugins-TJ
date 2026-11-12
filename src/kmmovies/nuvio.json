@@ -1,0 +1,17 @@
+{
+  "name": "KMMovies",
+  "description": "KMMovies (kmmovies.beer, new home of Khatrimaza): Bollywood, Hollywood, South, Hindi dubbed and dual-audio movies. Direct KMCLOUD files (R2 and Google Drive) up to 1080p, checked before they are shown.",
+  "version": "1.0.0",
+  "supportedTypes": [
+    "movie"
+  ],
+  "formats": [
+    "mp4",
+    "mkv"
+  ],
+  "logo": "https://www.google.com/s2/favicons?domain=kmmovies.beer&sz=128",
+  "contentLanguage": [
+    "en",
+    "hi"
+  ]
+}

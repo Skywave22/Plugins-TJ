@@ -41,6 +41,7 @@ They are the TJ-Plugins (SkyStream) plugins, converted to run as Nuvio providers
 | **HiCine** | Hollywood, Bollywood, K-Drama and anime movies and series from hicine.sbs, dual audio Hindi, up to 1080p - FSL, PixelDrain and more | ✅ | ✅ | ✅ | ✅ |
 | **PikaHD** | Anime series and movies in Hindi, English and Japanese (dual audio) from new.pikahd.co - HubCloud, GDFlix and StreamTape up to 1080p | ✅ | ✅ | ✅ | ✅ |
 | **DesiSerialOnline** | Hindi TV serials and reality shows (Star Plus, Colors, Sony, Zee...) from desiserialonline.su, matched by air date | ✅ | ✅ | ✅ | ✅ |
+| **KMMovies** | Bollywood, Hollywood, South, Hindi dubbed and dual-audio movies from kmmovies.beer (new home of Khatrimaza) - direct KMCLOUD files (R2 and Google Drive) up to 1080p. Movies only: the site's series are whole-season files | ✅ | ❌ | ✅ | ✅ |
 
 More providers are being added one at a time.
 

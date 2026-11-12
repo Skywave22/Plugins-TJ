@@ -1,6 +1,6 @@
 {
   "name": "TJ-Plugins",
-  "version": "1.0.59",
+  "version": "1.0.60",
   "description": "TJ-Plugins providers for Nuvio — Hindi, dubbed, Bollywood and world movies & series.",
   "author": "TJ-Plugins",
   "scrapers": [
@@ -317,6 +317,27 @@
         "en",
         "hi",
         "ur"
+      ]
+    },
+    {
+      "id": "kmmovies",
+      "name": "KMMovies",
+      "description": "KMMovies (kmmovies.beer, new home of Khatrimaza): Bollywood, Hollywood, South, Hindi dubbed and dual-audio movies. Direct KMCLOUD files (R2 and Google Drive) up to 1080p, checked before they are shown.",
+      "version": "1.0.0",
+      "author": "TJ-Plugins",
+      "supportedTypes": [
+        "movie"
+      ],
+      "filename": "providers/kmmovies.js",
+      "enabled": true,
+      "formats": [
+        "mp4",
+        "mkv"
+      ],
+      "logo": "https://www.google.com/s2/favicons?domain=kmmovies.beer&sz=128",
+      "contentLanguage": [
+        "en",
+        "hi"
       ]
     },
     {
