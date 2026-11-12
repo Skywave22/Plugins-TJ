@@ -1,0 +1,17 @@
+{
+  "name": "Net77",
+  "description": "Net77 (net77.cc, the original NetMirror): Netflix, Prime Video and JioHotstar titles in every audio language they have (Hindi, English, Tamil, Telugu, Korean, Japanese...), 1080p HLS with English subtitles.",
+  "version": "1.0.0",
+  "supportedTypes": [
+    "movie",
+    "tv"
+  ],
+  "formats": [
+    "m3u8"
+  ],
+  "logo": "https://www.google.com/s2/favicons?domain=net77.cc&sz=128",
+  "contentLanguage": [
+    "en",
+    "hi"
+  ]
+}

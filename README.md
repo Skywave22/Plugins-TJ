@@ -42,6 +42,7 @@ They are the TJ-Plugins (SkyStream) plugins, converted to run as Nuvio providers
 | **PikaHD** | Anime series and movies in Hindi, English and Japanese (dual audio) from new.pikahd.co - HubCloud, GDFlix and StreamTape up to 1080p | ✅ | ✅ | ✅ | ✅ |
 | **DesiSerialOnline** | Hindi TV serials and reality shows (Star Plus, Colors, Sony, Zee...) from desiserialonline.su, matched by air date | ✅ | ✅ | ✅ | ✅ |
 | **KMMovies** | Bollywood, Hollywood, South, Hindi dubbed and dual-audio movies from kmmovies.beer (new home of Khatrimaza) - direct KMCLOUD files (R2 and Google Drive) up to 1080p. Movies only: the site's series are whole-season files | ✅ | ❌ | ✅ | ✅ |
+| **Net77** | Netflix, Prime Video and JioHotstar titles from net77.cc (the original NetMirror) - one 1080p link per title with every audio language it has (Hindi, English, Tamil, Telugu, Korean, Japanese...) and subtitles; takes ~40 s (NetMirror's own check). Phone/tablet only | ✅ | ✅ | ✅ | ❌ |
 
 More providers are being added one at a time.
 

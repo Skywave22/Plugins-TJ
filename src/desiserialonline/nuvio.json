@@ -1,7 +1,7 @@
 {
   "name": "DesiSerialOnline",
   "description": "DesiSerialOnline (desiserialonline.su): Hindi TV serials and reality shows (Star Plus, Colors, Sony, Zee...) by air date; every link is checked.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "supportedTypes": [
     "tv"
   ],

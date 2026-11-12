@@ -1,7 +1,7 @@
 {
   "name": "PikaHD",
   "description": "PikaHD (new.pikahd.co): anime series and movies in Hindi, English and Japanese (dual audio), from HubCloud, GDFlix and StreamTape up to 1080p; every link is checked.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "supportedTypes": [
     "movie",
     "tv"

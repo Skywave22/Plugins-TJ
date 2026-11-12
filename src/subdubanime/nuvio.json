@@ -1,7 +1,7 @@
 {
   "name": "SubDubAnime",
   "description": "SubDubAnime (subdubanime.site): Hindi and English dubbed (and subbed) anime series and movies, up to 1080p. Every language version of a title is listed (Hindi Dubbed, Hindi Fan Dubbed, English Dubbed...); every link is checked.",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "supportedTypes": [
     "movie",
     "tv"
