@@ -1,6 +1,6 @@
 {
   "name": "TJ-Plugins",
-  "version": "1.0.40",
+  "version": "1.0.41",
   "description": "TJ-Plugins providers for Nuvio — Hindi, dubbed, Bollywood and world movies & series.",
   "author": "TJ-Plugins",
   "scrapers": [
@@ -351,6 +351,28 @@
       "contentLanguage": [
         "hi",
         "en"
+      ]
+    },
+    {
+      "id": "subdubanime",
+      "name": "SubDubAnime",
+      "description": "SubDubAnime (subdubanime.site): Hindi and English dubbed (and subbed) anime series and movies, up to 1080p. Every language version of a title is listed (Hindi Dubbed, Hindi Fan Dubbed, English Dubbed...); every link is checked.",
+      "version": "1.0.0",
+      "author": "TJ-Plugins",
+      "supportedTypes": [
+        "movie",
+        "tv"
+      ],
+      "filename": "providers/subdubanime.js",
+      "enabled": true,
+      "formats": [
+        "m3u8",
+        "mp4"
+      ],
+      "logo": "https://www.google.com/s2/favicons?domain=subdubanime.site&sz=128",
+      "contentLanguage": [
+        "en",
+        "hi"
       ]
     },
     {
