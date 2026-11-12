@@ -1,0 +1,27 @@
+{
+  "packageName": "com.pikahd.skystream",
+  "name": "PikaHD",
+  "version": 4,
+  "baseUrl": "https://new.pikahd.co",
+  "domains": [
+    {
+      "name": "new.pikahd.co (primary)",
+      "url": "https://new.pikahd.co"
+    }
+  ],
+  "description": "Anime & dubbed movies/series from PikaHD — fixed titles, movie/series detection and merged seasons",
+  "authors": [
+    "TJ-Plugins"
+  ],
+  "languages": [
+    "hi",
+    "en",
+    "ja"
+  ],
+  "categories": [
+    "Anime",
+    "Movies",
+    "Series"
+  ],
+  "isAdult": false
+}
