@@ -33,6 +33,7 @@ They are the TJ-Plugins (SkyStream) plugins, converted to run as Nuvio providers
 | **DesiSerials** | Daily Hindi TV serials & reality shows (Star Plus, Zee, Sony, Colors, Sab, &TV). Episodes matched by TMDB air date. | — | ✅ | ✅ | ✅ |
 | **DesiDubAnime** | Hindi / Tamil / Telugu dubbed anime (series + movies) with English subtitles. Plays the VidMoly mirror; the site's own P2P player is currently down, so some episodes have no link. | ✅ | ✅ | ✅ | ✅ |
 | **Bingr** | Movies, TV & anime from bingr.one: Prism multi-audio (Hindi, Telugu, Tamil, English, French…) up to 1080p, Edge, Nimbus, Citadel (Hindi/Tamil/Telugu/Kannada dubs), with subtitles | ✅ | ✅ | ✅ | ✅ |
+| **AniHype** | Anime from anihype.sbs: TryEmbed Sub + English Dub (1080p), Katana Sub (1080p), Uqload (Japanese + English audio), Orion (Japanese, English, Hindi, Tamil, Telugu, Malayalam, Kannada, French; HEVC), Mikaza Hindi Dub, with English subtitles. TMDB titles are mapped to the right AniList season / part | ✅ | ✅ | ✅ | ✅ |
 
 More providers are being added one at a time.
 
