@@ -1,6 +1,6 @@
 {
   "name": "TJ-Plugins",
-  "version": "1.0.70",
+  "version": "1.0.71",
   "description": "TJ-Plugins providers for Nuvio — Hindi, dubbed, Bollywood and world movies & series.",
   "author": "TJ-Plugins",
   "scrapers": [
@@ -338,6 +338,28 @@
         "m3u8"
       ],
       "logo": "https://www.google.com/s2/favicons?domain=net77.cc&sz=128",
+      "contentLanguage": [
+        "en",
+        "hi"
+      ]
+    },
+    {
+      "id": "nxsha",
+      "name": "Nxsha",
+      "description": "Nxsha (nxsha.space): the site's own rows and search, with its multi-server links (Nitro, Citadel, Prism, HubCloud, 4K-Hub, mahalala, CastVid…) in every audio track they offer",
+      "version": "1.0.0",
+      "author": "TJ-Plugins",
+      "supportedTypes": [
+        "movie",
+        "tv"
+      ],
+      "filename": "providers/nxsha.js",
+      "enabled": true,
+      "formats": [
+        "m3u8",
+        "mp4"
+      ],
+      "logo": "https://www.google.com/s2/favicons?domain=nxsha.space&sz=128",
       "contentLanguage": [
         "en",
         "hi"
