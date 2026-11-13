@@ -30,7 +30,6 @@ They are the TJ-Plugins (SkyStream) plugins, converted to run as Nuvio providers
 | **MoviesHubHD** | VidNest player network (Delta, Zeta, Alfa, Beta, Catflix…): Hindi + English, multi-audio, up to 4K, subtitles | ✅ | ✅ | ✅ | ✅ |
 | **KatMovieHD** | Hollywood & web series in Hindi dubbed / dual audio: StreamTape, HubCloud, GDFlix (searches the site by title) | ✅ | ✅ | ✅ | ✅ |
 | **SSR Movies** | Hindi dubbed / dual audio movies (480p–4K): Watch HLS, HubCloud, GDFlix. Best for movies; complete-season packs often have no playable file | ✅ | ✅ | ✅ | ✅ |
-| **DesiSerials** | Daily Hindi TV serials & reality shows (Star Plus, Zee, Sony, Colors, Sab, &TV). Episodes matched by TMDB air date. | — | ✅ | ✅ | ✅ |
 | **DesiDubAnime** | Hindi / Tamil / Telugu dubbed anime (series + movies) with English subtitles. Plays the VidMoly mirror; the site's own P2P player is currently down, so some episodes have no link. | ✅ | ✅ | ✅ | ✅ |
 | **Bingr** | Movies, TV & anime from bingr.one: Prism multi-audio (Hindi, Telugu, Tamil, English, French…) up to 1080p, Edge, Nimbus, Citadel (Hindi/Tamil/Telugu/Kannada dubs), with subtitles | ✅ | ✅ | ✅ | ✅ |
 | **AniHype** | Anime from anihype.sbs: TryEmbed Sub + English Dub (1080p), Katana Sub (1080p), Uqload (Japanese + English audio), Orion (Japanese, English, Hindi, Tamil, Telugu, Malayalam, Kannada, French; HEVC), Mikaza Hindi Dub, with English subtitles. TMDB titles are mapped to the right AniList season / part | ✅ | ✅ | ✅ | ✅ |
@@ -40,7 +39,6 @@ They are the TJ-Plugins (SkyStream) plugins, converted to run as Nuvio providers
 | **KDMaza** | Korean, Chinese and Turkish dramas, Korean movies and anime in Hindi/Urdu from kdramasmaza.net - HubCloud and GDFlix | ✅ | ✅ | ✅ | ✅ |
 | **HiCine** | Hollywood, Bollywood, K-Drama and anime movies and series from hicine.sbs, dual audio Hindi, up to 1080p - FSL, PixelDrain and more | ✅ | ✅ | ✅ | ✅ |
 | **PikaHD** | Anime series and movies in Hindi, English and Japanese (dual audio) from new.pikahd.co - HubCloud, GDFlix and StreamTape up to 1080p | ✅ | ✅ | ✅ | ✅ |
-| **DesiSerialOnline** | Hindi TV serials and reality shows (Star Plus, Colors, Sony, Zee...) from desiserialonline.su, matched by air date | ✅ | ✅ | ✅ | ✅ |
 | **KMMovies** | Bollywood, Hollywood, South, Hindi dubbed and dual-audio movies from kmmovies.beer (new home of Khatrimaza) - direct KMCLOUD files (R2 and Google Drive) up to 1080p. Movies only: the site's series are whole-season files | ✅ | ❌ | ✅ | ✅ |
 | **Net77** | Netflix, Prime Video and JioHotstar titles from net77.cc (the original NetMirror) - one 1080p link per title with every audio language it has (Hindi, English, Tamil, Telugu, Korean, Japanese...) and subtitles; takes ~40 s (NetMirror's own check). Phone/tablet only | ✅ | ✅ | ✅ | ❌ |
 
