@@ -42,6 +42,7 @@ They are the TJ-Plugins (SkyStream) plugins, converted to run as Nuvio providers
 | **KMMovies** | Bollywood, Hollywood, South, Hindi dubbed and dual-audio movies from kmmovies.beer (new home of Khatrimaza) - direct KMCLOUD files (R2 and Google Drive) up to 1080p. Movies only: the site's series are whole-season files | ✅ | ❌ | ✅ | ✅ |
 | **Net77** | Netflix, Prime Video and JioHotstar titles from net77.cc (the original NetMirror) - one 1080p link per title with every audio language it has (Hindi, English, Tamil, Telugu, Korean, Japanese...) and subtitles; takes ~40 s (NetMirror's own check). Phone/tablet only | ✅ | ✅ | ✅ | ❌ |
 | **Nxsha** | Movies, series and anime from nxsha.space — the site's own rows and search, with its multi-server links (Nitro, Citadel, Prism, HubCloud, 4K-Hub, mahalala, CastVid…) in every audio track offered | ✅ | ✅ | ✅ | ✅ |
+| **Zenix** | Movies and series from zenix.website — its own home rows and search, playing the site player's Orion links in every audio track (Original, Hindi, Tamil, Telugu, French, Spanish…) up to 1080p | ✅ | ✅ | ✅ | ✅ |
 
 More providers are being added one at a time.
 
