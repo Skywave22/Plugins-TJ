@@ -1,63 +1,130 @@
+<div align="center">
+
 # TJ-Plugins for Nuvio
 
-Streaming providers for the **Nuvio** app (phone and TV): Hindi, dubbed, Bollywood and world movies & series.
-They are the TJ-Plugins (SkyStream) plugins, converted to run as Nuvio providers.
+**25 streaming providers for Nuvio — movies, series, anime and Asian dramas, on phone and TV.**
+
+[![Providers](https://img.shields.io/badge/providers-25-6f42c1?style=flat-square)](#providers)
+[![Phone + TV](https://img.shields.io/badge/Nuvio-phone_%26_TV-2ea44f?style=flat-square)](#compatibility)
+[![SkyStream](https://img.shields.io/badge/also_for-SkyStream-f59e0b?style=flat-square)](https://github.com/Skywave22/TJ-Plugins)
+
+[Install](#install) · [Providers](#providers) · [Compatibility](#compatibility) · [Development](#development)
+
+</div>
+
+---
 
 ## Install
 
-1. Open **Nuvio → Settings → Plugins** (called *Providers* / *Scrapers* in some versions).
-2. Add this repository URL:
+**1.** Open **Nuvio** → **Settings** → **Plugins** *(called Providers or Scrapers in some versions)*
 
-   ```
-   https://raw.githubusercontent.com/Skywave22/Plugins-TJ/main/manifest.json
-   ```
+**2.** Paste this repository URL:
 
-3. Turn on the providers you want. Updates arrive automatically when you refresh the repository.
+```txt
+https://raw.githubusercontent.com/Skywave22/Plugins-TJ/main/manifest.json
+```
+
+**3.** Turn on the providers you want — links appear under the **Streams** tab of any movie or episode.
+
+> **Updating:** refresh the repository in Settings. New versions arrive automatically, with no reinstall.
+
+---
 
 ## Providers
 
-| Provider | Content | Movies | Series | Nuvio (phone) | NuvioTV |
-|---|---|:-:|:-:|:-:|:-:|
-| **Cinezo** | Hindi dubs, multi-audio, English up to 4K, with subtitles (VidNest + ScreenScape servers) | ✅ | ✅ | ✅ | ✅ |
-| **ScreenScape** | 30+ "Scape" servers per title: Hindi dubs (MhPly, AwsPly, Citadel), Nitro multi-audio, 4K-Hub | ✅ | ✅ | ✅ | ✅ |
-| **CineHD** | TMDB catalog with many servers: MhPly/AwsPly Hindi, Nitro multi-audio, HDHub, Rock HLS, VidAPI | ✅ | ✅ | ✅ | ✅ |
-| **CineJoy** | TMDB catalog with Nitro multi-audio, MhPly/AwsPly/Citadel Hindi, StremFx, HDHub, VidAPI, MovieBox | ✅ | ✅ | ✅ | ✅ |
-| **FMovies** | MoviesAPI multi-quality HLS with subtitles (limited catalog: its VidLove backup is offline) | ✅ | ✅ | ✅ | ✅ |
-| **RiveStream** | Citadel, Prvibd, River, Kutti, HindiSk servers plus MhPly/AwsPly/VidPi/HDHub: Hindi, English, Tamil, Telugu, Urdu | ✅ | ✅ | ✅ | ✅ |
-| **Vidbox** | Nxsha multi-language servers (TMDB ids, 1:1 matching): Hindi first, then English, Tamil, Telugu, Urdu | ✅ | ✅ | ✅ | ✅ |
-| **HiStream** | HiStream player servers: Hindi first, Bollywood, Hindi series and platform originals | ✅ | ✅ | ✅ | ✅ |
-| **ZXCStream** | Ad-free Main Server (vidstuck): Orion original audio + Hindi dub up to 1080p, Atlas, Daedalus, with subtitles | ✅ | ✅ | ✅ | ✅ |
-| **MoviesHubHD** | VidNest player network (Delta, Zeta, Alfa, Beta, Catflix…): Hindi + English, multi-audio, up to 4K, subtitles | ✅ | ✅ | ✅ | ✅ |
-| **KatMovieHD** | Hollywood & web series in Hindi dubbed / dual audio: StreamTape, HubCloud, GDFlix (searches the site by title) | ✅ | ✅ | ✅ | ✅ |
-| **SSR Movies** | Hindi dubbed / dual audio movies (480p–4K): Watch HLS, HubCloud, GDFlix. Best for movies; complete-season packs often have no playable file | ✅ | ✅ | ✅ | ✅ |
-| **DesiDubAnime** | Hindi / Tamil / Telugu dubbed anime (series + movies) with English subtitles. Plays the VidMoly mirror; the site's own P2P player is currently down, so some episodes have no link. | ✅ | ✅ | ✅ | ✅ |
-| **Bingr** | Movies, TV & anime from bingr.one: Prism multi-audio (Hindi, Telugu, Tamil, English, French…) up to 1080p, Edge, Nimbus, Citadel (Hindi/Tamil/Telugu/Kannada dubs), with subtitles | ✅ | ✅ | ✅ | ✅ |
-| **AniHype** | Anime from anihype.sbs: TryEmbed Sub + English Dub (1080p), Katana Sub (1080p), Uqload (Japanese + English audio), Orion (Japanese, English, Hindi, Tamil, Telugu, Malayalam, Kannada, French; HEVC), Mikaza Hindi Dub, with English subtitles. TMDB titles are mapped to the right AniList season / part | ✅ | ✅ | ✅ | ✅ |
-| **RareAnimes** | Hindi, Tamil, Telugu and Malayalam dubbed anime, cartoons and animated movies from rareanimes.mov (Rare Toons India) - every audio language of an episode, direct HD files from StreamBeta | ✅ | ✅ | ✅ | ✅ |
-| **SubDubAnime** | Hindi and English dubbed (and subbed) anime series and movies from subdubanime.site, up to 1080p - every language version of a title (Hindi Dubbed, Hindi Fan Dubbed, English Dubbed…) | ✅ | ✅ | ✅ | ✅ |
-| **KatDrama** | Korean and Chinese dramas and movies in Hindi, dual audio and English from new.katdrama.my - HubCloud and StreamTape, 480p-1080p | ✅ | ✅ | ✅ | ✅ |
-| **KDMaza** | Korean, Chinese and Turkish dramas, Korean movies and anime in Hindi/Urdu from kdramasmaza.net - HubCloud and GDFlix | ✅ | ✅ | ✅ | ✅ |
-| **HiCine** | Hollywood, Bollywood, K-Drama and anime movies and series from hicine.sbs, dual audio Hindi, up to 1080p - FSL, PixelDrain and more | ✅ | ✅ | ✅ | ✅ |
-| **PikaHD** | Anime series and movies in Hindi, English and Japanese (dual audio) from new.pikahd.co - HubCloud, GDFlix and StreamTape up to 1080p | ✅ | ✅ | ✅ | ✅ |
-| **KMMovies** | Bollywood, Hollywood, South, Hindi dubbed and dual-audio movies from kmmovies.beer (new home of Khatrimaza) - direct KMCLOUD files (R2 and Google Drive) up to 1080p. Movies only: the site's series are whole-season files | ✅ | ❌ | ✅ | ✅ |
-| **Net77** | Netflix, Prime Video and JioHotstar titles from net77.cc (the original NetMirror) - one 1080p link per title with every audio language it has (Hindi, English, Tamil, Telugu, Korean, Japanese...) and subtitles; takes ~40 s (NetMirror's own check). Phone/tablet only | ✅ | ✅ | ✅ | ❌ |
-| **Nxsha** | Movies, series and anime from nxsha.space — the site's own rows and search, with its multi-server links (Nitro, Citadel, Prism, HubCloud, 4K-Hub, mahalala, CastVid…) in every audio track offered | ✅ | ✅ | ✅ | ✅ |
-| **Zenix** | Movies and series from zenix.website — its own home rows and search, playing the site player's Orion links in every audio track (Original, Hindi, Tamil, Telugu, French, Spanish…) up to 1080p | ✅ | ✅ | ✅ | ✅ |
+Each provider is the matching [TJ-Plugins](https://github.com/Skywave22/TJ-Plugins) SkyStream plugin, converted to run natively inside Nuvio.
 
-More providers are being added one at a time.
+### 🎬 Movies & series
 
-### Notes
-- Links are checked before they are shown. Links that could not be checked are marked *(may not play)*.
-- **NuvioTV** runs a provider's requests one at a time, so providers are slower there than on a phone
-  (Cinezo / ScreenScape: about 4–15 s on a phone, about 18–33 s on TV). On TV:
-  - providers stop making new requests after 32 s, so they always finish before the app's 60 s limit;
-  - Cinezo and ScreenScape ask only the 14 servers that actually return links, instead of all ~31.
+| Provider | What you get | Movies | Series |
+|---|---|:-:|:-:|
+| **Cinezo** | Hindi dubs and multi-audio up to 4K with subtitles (VidNest + ScreenScape servers) | ✅ | ✅ |
+| **ScreenScape** | 30+ "Scape" servers per title: Hindi dubs (MhPly, AwsPly, Citadel), Nitro multi-audio, 4K-Hub | ✅ | ✅ |
+| **CineHD** | Many servers: MhPly / AwsPly Hindi, Nitro multi-audio, HDHub, Rock HLS, VidAPI | ✅ | ✅ |
+| **CineJoy** | Nitro multi-audio, MhPly / AwsPly / Citadel Hindi, StremFx, HDHub, VidAPI, MovieBox | ✅ | ✅ |
+| **Bingr** | Movies, TV and anime from bingr.one: Prism multi-audio (Hindi, Telugu, Tamil, English, French…) up to 1080p, Edge, Nimbus, Citadel dubs, subtitles in up to 20 languages | ✅ | ✅ |
+| **Nxsha** | The site's own rows and search, with its multi-server links (Nitro, Citadel, Prism, HubCloud, 4K-Hub, mahalala, CastVid…) in every audio track | ✅ | ✅ |
+| **Zenix** | The site player's Orion links in every audio track offered — Original, Hindi, Tamil, Telugu, French, Spanish… up to 1080p | ✅ | ✅ |
+| **RiveStream** | Citadel, Prvibd, River, Kutti and HindiSk servers plus MhPly / AwsPly / VidPi / HDHub: Hindi, English, Tamil, Telugu, Urdu | ✅ | ✅ |
+| **Vidbox** | Nxsha multi-language servers, TMDB-matched 1:1: Hindi first, then English, Tamil, Telugu, Urdu | ✅ | ✅ |
+| **HiStream** | HiStream player servers: Hindi first, Bollywood, Hindi series and platform originals | ✅ | ✅ |
+| **MoviesHubHD** | VidNest player network (Delta, Zeta, Alfa, Beta, Catflix…): Hindi + English, multi-audio, up to 4K | ✅ | ✅ |
+| **FMovies** | MoviesAPI multi-quality HLS with subtitles (limited catalogue — its VidLove backup is offline) | ✅ | ✅ |
+| **ZXCStream** | Ad-free Main Server (vidstuck): Orion original audio + Hindi dub up to 1080p, Atlas, Daedalus, with subtitles | ✅ | ✅ |
+
+### 🇮🇳 Hindi & Bollywood
+
+| Provider | What you get | Movies | Series |
+|---|---|:-:|:-:|
+| **KatMovieHD** | Hollywood and web series in Hindi dubbed / dual audio — StreamTape, HubCloud, GDFlix | ✅ | ✅ |
+| **SSR Movies** | Hindi dubbed / dual audio movies in 480p–4K — Watch HLS, HubCloud, GDFlix | ✅ | ✅ |
+| **KMMovies** | Bollywood, Hollywood, South, Hindi dubbed and dual-audio movies from kmmovies.beer — direct files up to 1080p | ✅ | ❌ |
+| **HiCine** | Hollywood, Bollywood, K-Drama and anime, dual audio Hindi, up to 1080p — FSL, PixelDrain and more | ✅ | ✅ |
+
+### 🍥 Anime
+
+| Provider | What you get | Movies | Series |
+|---|---|:-:|:-:|
+| **AniHype** | TryEmbed Sub + English Dub, Katana Sub (1080p), Uqload, Orion (8 languages, HEVC) and Mikaza Hindi Dub, with English subtitles | ✅ | ✅ |
+| **DesiDubAnime** | Hindi / Tamil / Telugu dubbed anime with English subtitles — plays the VidMoly mirror | ✅ | ✅ |
+| **PikaHD** | Anime in Hindi, English and Japanese (dual audio) — HubCloud, GDFlix and StreamTape up to 1080p | ✅ | ✅ |
+| **RareAnimes** | Hindi, Tamil, Telugu and Malayalam dubbed anime, cartoons and animated movies — direct HD files | ✅ | ✅ |
+| **SubDubAnime** | Hindi and English dubbed (and subbed) anime up to 1080p — every language version of a title | ✅ | ✅ |
+
+### 🌸 Asian dramas
+
+| Provider | What you get | Movies | Series |
+|---|---|:-:|:-:|
+| **KatDrama** | Korean and Chinese dramas and movies in Hindi, dual audio and English — HubCloud and StreamTape | ✅ | ✅ |
+| **KDMaza** | Korean, Chinese and Turkish dramas, Korean movies and anime in Hindi / Urdu — HubCloud and GDFlix | ❌ | ✅ |
+
+### 📺 OTT catalogues
+
+| Provider | What you get | Movies | Series |
+|---|---|:-:|:-:|
+| **Net77** | Netflix, Prime Video and JioHotstar titles — one 1080p link per title with every audio language it has, plus subtitles. Takes about 40 s (NetMirror's own check) | ✅ | ✅ |
+
+> **Best all-round start:** **Cinezo**, **ScreenScape** and **Nxsha** cover most popular titles with Hindi audio first. Add **AniHype** for anime and **KatDrama** for K-dramas.
+
+---
+
+## Compatibility
+
+<a id="compatibility"></a>
+
+| | Nuvio (phone / tablet) | Nuvio TV |
+|---|:-:|:-:|
+| **All providers except Net77** | ✅ | ✅ |
+| **Net77** | ✅ | ❌ *(TV runtime has no session store for its check)* |
+
+**On TV, providers are slower.** Nuvio TV runs a provider's requests one at a time, so a provider that takes 4–15 s on a phone takes about 18–33 s on TV (Cinezo, ScreenScape). To stay inside the app's 60 s limit:
+
+- providers stop making new requests after **32 s**, so they always finish in time;
+- Cinezo and ScreenScape ask only the **14 servers that actually return links** instead of all ~31.
+
+---
+
+## Good to know
+
+- **Links are checked before they are shown.** Links that could not be checked are marked *(may not play)*.
+- **Hindi and the best quality come first** in the stream list where a provider offers a choice.
+- **A provider showing nothing** usually means the site moved or is down — refresh the repository for an update.
+- **GDFlix / HubCloud** files play in Nuvio; desktop tools may meet a Cloudflare check instead.
+
+---
+
+<a id="development"></a>
 
 ## Development
 
-```
+<details>
+<summary><b>Build, layout and the test runtime</b></summary>
+
+<br>
+
+```bash
 npm install
-node build.js [id…]       # src/<id>/ → providers/<id>.js and manifest.json (patch version bumps automatically)
+node build.js [id…]       # src/<id>/ → providers/<id>.js and manifest.json (patch bump automatic)
 ```
 
 Each provider lives in `src/<id>/`:
@@ -69,34 +136,32 @@ Each provider lives in `src/<id>/`:
 | `nuvio.json` | Nuvio manifest entry (name, description, version, types, formats, logo, languages) |
 | `index.js` | Nuvio entry point (`makeProvider`, TMDB or search mode) |
 
-`src/_lib/` provides the SkyStream API on top of Nuvio: `http_get`/`http_post`, crypto and timers (NuvioTV has no
-`setTimeout` or `crypto.subtle`). It also resolves TMDB ids (including `tt…` IMDb ids), matches titles and
-converts results to Nuvio streams. `getStreams` never throws; on any failure it returns `[]`.
+`src/_lib/` provides the SkyStream API on top of Nuvio — `http_get` / `http_post`, crypto and timers (Nuvio TV has no `setTimeout` or `crypto.subtle`). It also resolves TMDB ids (including `tt…` IMDb ids), matches titles and converts results to Nuvio streams. `getStreams` never throws: on any failure it returns `[]`.
 
-### Testing (runs the real Nuvio JavaScript runtime in QuickJS)
+### Testing — the real Nuvio runtime in QuickJS
 
-The test tool uses the JavaScript runtime code from the Nuvio apps. Extract it once from local clones
-of [NuvioMobile](https://github.com/NuvioMedia/NuvioMobile) and [NuvioTV](https://github.com/NuvioMedia/NuvioTV):
+Extract the runtime once from local clones of [NuvioMobile](https://github.com/NuvioMedia/NuvioMobile) and [NuvioTV](https://github.com/NuvioMedia/NuvioTV):
 
-```
+```bash
 node tools/extract-runtime.mjs <NuvioMobile>/composeApp/src/fullCommonMain/kotlin/com/nuvio/app/features/plugins/runtime/js/JsBindings.kt \
                                <NuvioTV>/app/src/full/java/com/nuvio/tv/core/plugin/PluginRuntime.kt
 ```
 
 Then:
 
-```
-node tools/test.mjs <id> <tmdbId|tt…> [movie|tv] [season] [episode] [--check] [--tv] [--debug] [--http] [--log]
-node tools/test.mjs cinezo 27205 movie --check          # Inception, phone runtime, check every link
-node tools/test.mjs cinezo 1396 tv 1 1 --check --tv     # Breaking Bad S01E01, NuvioTV runtime
+```bash
+node tools/test.mjs <id> <tmdbId|tt…> [movie|tv] [season] [episode] [--check] [--tv] [--debug]
+node tools/test.mjs cinezo 27205 movie --check      # Inception, phone runtime, every link checked
 ```
 
-Options:
-- `--check`: test that every returned link plays.
-- `--tv`: use the NuvioTV runtime (blocking fetch, no timers, CryptoJS).
-- `--debug`: show the provider's internal steps.
-- `--http`: list every request.
-- `--curl <regex|all>`: send matching requests through curl. Some file hosts (GDFlix) reject Node's TLS
-  fingerprint but accept curl's and OkHttp's (the apps), e.g. `--curl "kmhd|gdflix"`.
+</details>
 
-Author: **TJ-Plugins**
+---
+
+<div align="center">
+<sub>
+
+Made by **TJ-Plugins** · Providers only link to media that third-party websites host publicly. Nothing is hosted in this repository.
+
+</sub>
+</div>
