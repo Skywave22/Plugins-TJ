@@ -1,0 +1,36 @@
+{
+  "name": "TJ All-in-one (private)",
+  "version": "1.0.0",
+  "description": "Private TJ-Plugins all-in-one provider for Nuvio — every working TJ-Plugins site in one provider.",
+  "author": "TJ-Plugins",
+  "scrapers": [
+    {
+      "id": "tjaio",
+      "name": "TJ All-in-one",
+      "description": "Every working TJ-Plugins source in one: it asks all of them at once (Hindi / dual-audio titles first) and merges the results, so one provider covers movies, series, anime and Korean dramas. Links from different sites are de-duplicated and the fastest sites are always answered first.",
+      "version": "1.0.0",
+      "author": "TJ-Plugins",
+      "supportedTypes": [
+        "movie",
+        "tv"
+      ],
+      "filename": "https://raw.githubusercontent.com/Skywave22/Plugins-TJ/main/aio/tjaio.js",
+      "enabled": true,
+      "hasSettings": true,
+      "formats": [
+        "m3u8",
+        "mp4",
+        "mkv"
+      ],
+      "logo": "https://www.google.com/s2/favicons?domain=github.com&sz=128",
+      "contentLanguage": [
+        "hi",
+        "en",
+        "ta",
+        "te",
+        "ko",
+        "ja"
+      ]
+    }
+  ]
+}

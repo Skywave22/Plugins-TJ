@@ -1,6 +1,6 @@
 {
   "name": "TJ-Plugins",
-  "version": "1.0.72",
+  "version": "1.0.74",
   "description": "TJ-Plugins providers for Nuvio — Hindi, dubbed, Bollywood and world movies & series.",
   "author": "TJ-Plugins",
   "scrapers": [
@@ -166,7 +166,7 @@
       "id": "hicine",
       "name": "HiCine",
       "description": "HiCine (hicine.sbs): Hollywood, Bollywood, K-Drama and anime movies and series, dual audio Hindi, up to 1080p from FSL, PixelDrain and other direct servers; every link is checked.",
-      "version": "1.0.1",
+      "version": "1.0.4",
       "author": "TJ-Plugins",
       "supportedTypes": [
         "movie",

@@ -5,7 +5,7 @@
 import { setT, clearT, setI, clearI, addBlocked, nativeTimers } from "./timers.js";
 
 var APP_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
-var REQUEST_TIMEOUT_MS = 20000;   // SkyStream gives up after ~15 s; dead mirrors must not eat Nuvio's 60 s budget
+var REQUEST_TIMEOUT_MS = 30000;   // sites that answer slowly (HiCine link worker 9.7 s, Nxsha 8-11 s) must not be cut off
 var KNOWN_HEADERS = ["set-cookie", "location", "content-type", "content-length", "content-disposition", "server",
   "cf-ray", "cf-mitigated", "refresh", "date", "etag", "last-modified", "x-redirect", "x-powered-by", "access-control-allow-origin"];
 
@@ -74,6 +74,11 @@ function withTimeout(p, ms, fallback) {
 var netDeadline = 0;
 export function setNetDeadline(ts) { netDeadline = ts; }
 
+// Counters for one getStreams run (the adapter reports them with --debug)
+var STAT = { req: 0, last: 0, lastUrl: "" };
+export function resetStats() { STAT = { req: 0, last: 0, lastUrl: "" }; }
+export function netStats() { return { req: STAT.req, last: STAT.last, lastUrl: STAT.lastUrl }; }
+
 export async function request(method, url, headers, body) {
   if (method === "POST" && headers && typeof headers === "object" && !body && (headers.body || headers.headers)) {
     body = headers.body; headers = headers.headers;
@@ -92,8 +97,11 @@ export async function request(method, url, headers, body) {
   dbg("  → " + method + " " + url.slice(0, 120));
   var pending = fetch(url, opts);       // returns at once on phones; on NuvioTV the request already ran (blocking)
   addBlocked(Date.now() - t0);
+  STAT.req++;
   return withTimeout(pending.then(async function (res) {
-    dbg("  ← " + res.status + " " + (Date.now() - t0) + "ms " + url.slice(0, 120));
+    var took = Date.now() - t0;
+    STAT.last = took; STAT.lastUrl = String(url).slice(0, 90);
+    dbg("  ← " + res.status + " " + took + "ms " + url.slice(0, 120));
     var text = "";
     try { text = await res.text(); } catch (e) {}
     if (!res.status) return fail(res.statusText || "connection error");

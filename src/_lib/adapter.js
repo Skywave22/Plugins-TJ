@@ -1,12 +1,12 @@
 // Turns an embedded TJ-Plugins SkyStream plugin into a Nuvio provider:
 //   TMDB id → title/year (TMDB) → the site's item (direct TMDB link, or the site's search + strict
 //   title matching) → the right episode (load) → links (loadStreams) → Nuvio stream objects.
-import { instantiate, dbg, setNetDeadline } from "./host.js";
+import { instantiate, dbg, setNetDeadline, resetStats, netStats } from "./host.js";
 import { setT, clearT, cancelAll } from "./timers.js";
 import { parseTitle, loose, isSeries, dateIn } from "./titles.js";
 import { tmdbInfo, episodeAirDate } from "./tmdb.js";
 
-var BUDGET_MS = 52000;   // Nuvio stops a provider after 60 s and then shows nothing from it
+var BUDGET_MS = 55000;   // Nuvio stops a provider after 60 s and then shows nothing from it
 var TV_NET_MS = 32000;   // NuvioTV: no new requests after this (each one blocks; see host.js)
 
 function now() { return Date.now(); }
@@ -167,6 +167,7 @@ export function makeProvider(cfg) {
     var t0 = now();
     var left = function () { return BUDGET_MS - (now() - t0); };
     setNetDeadline(t0 + TV_NET_MS);
+    resetStats();
     try {
       var tm = await tmdbInfo(tmdbId, mediaType);
       if (!tm) return [];
@@ -210,6 +211,8 @@ export function makeProvider(cfg) {
 
       var st = await call(api, "loadStreams", [epUrl], left() - 1500);
       dbg("[tj] loadStreams done (" + (now() - t0) + "ms): " + (st && st.success !== false ? (st.data || []).length + " links" : JSON.stringify(st).slice(0, 200)));
+      var ns = netStats();
+      dbg("[tj] loadStreams done (" + (now() - t0) + "ms, " + ns.req + " requests, slowest " + ns.last + "ms " + ns.lastUrl + ")");
       if (!st || st.success === false || !Array.isArray(st.data)) return [];
       var seen = {};
       return st.data.map(function (s) { return toNuvio(s, cfg, info); }).filter(function (s) {
