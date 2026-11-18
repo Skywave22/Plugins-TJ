@@ -16,7 +16,6 @@
       ],
       "filename": "https://raw.githubusercontent.com/Skywave22/Plugins-TJ/main/aio/tjaio.js",
       "enabled": true,
-      "hasSettings": true,
       "formats": [
         "m3u8",
         "mp4",
